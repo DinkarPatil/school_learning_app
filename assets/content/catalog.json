@@ -1,0 +1,1249 @@
+{
+  "version": 1,
+  "sourceLanguage": "en",
+  "translationLanguages": ["hi", "mr"],
+  "classIds": [
+    "class-0",
+    "class-1",
+    "class-2",
+    "class-3",
+    "class-4",
+    "class-5"
+  ],
+  "subjects": [
+    {"id": "english", "title": "English", "subtitle": "Stories and words"},
+    {"id": "english_grammar", "title": "English Grammar", "subtitle": "Build correct sentences"},
+    {"id": "marathi", "title": "Marathi", "subtitle": "Start with pride and sound"},
+    {"id": "hindi", "title": "Hindi", "subtitle": "Simple reading and speaking"},
+    {"id": "mathematics", "title": "Mathematics", "subtitle": "Count, add, solve"},
+    {"id": "evs", "title": "EVS", "subtitle": "Nature, people, and home"},
+    {"id": "computer", "title": "Computer", "subtitle": "Digital basics made simple"},
+    {"id": "gk", "title": "General Knowledge", "subtitle": "Know your world"},
+    {"id": "communication", "title": "Communication", "subtitle": "Listen, speak, share"},
+    {"id": "little", "title": "Little Stars", "subtitle": "ABC, abc, numbers, words, and gentle games"}
+  ],
+  "activities": [
+    {
+      "id": "class-1-subject-english-activity-story",
+      "classId": "class-1",
+      "subjectId": "english",
+      "title": "Hello, Friend",
+      "activityType": "story",
+      "story": "Ami says hello to the sun, the bird, and the teacher. Everyone smiles back.",
+      "flashcards": [
+        {"front": "Hello", "back": "A friendly greeting", "audioAsset": "audio/flashcards/flash_english_1.wav"},
+        {"front": "Goodbye", "back": "A kind way to leave", "audioAsset": "audio/flashcards/flash_english_2.wav"},
+        {"front": "Thank you", "back": "We say it to show kindness"}
+      ],
+      "questions": [
+        {"prompt": "Which word is a greeting?", "options": ["Hello", "Chair", "Milk"], "answerIndex": 0, "hint": "Greetings are words we say when we meet."},
+        {"prompt": "Which word shows kindness?", "options": ["Thank you", "Tree", "Ball"], "answerIndex": 0, "hint": "Kind words help everyone feel happy."},
+        {"prompt": "Which one is an action word?", "options": ["Run", "Blue", "Book"], "answerIndex": 0, "hint": "Action words tell us what we do."}
+      ],
+      "practicePrompt": "Trace and write: Hello, Thank you, Goodbye",
+      "practiceHint": "Speak each word aloud before writing it.",
+      "audioAsset": "audio/lessons/lesson_english_c1.wav",
+      "translations": {"en": {"title": "Hello, Friend", "story": "Ami says hello to the sun, the bird, and the teacher. Everyone smiles back."}}
+    },
+    {
+      "id": "class-2-subject-english-activity-story",
+      "classId": "class-2",
+      "subjectId": "english",
+      "title": "Family Words",
+      "activityType": "story",
+      "story": "A child names family members and greets them kindly each morning.",
+      "flashcards": [
+        {"front": "Hello", "back": "A friendly greeting", "audioAsset": "audio/flashcards/flash_english_1.wav"},
+        {"front": "Goodbye", "back": "A kind way to leave", "audioAsset": "audio/flashcards/flash_english_2.wav"},
+        {"front": "Thank you", "back": "We say it to show kindness"}
+      ],
+      "questions": [
+        {"prompt": "Which word is a greeting?", "options": ["Hello", "Chair", "Milk"], "answerIndex": 0, "hint": "Greetings are words we say when we meet."},
+        {"prompt": "Which word shows kindness?", "options": ["Thank you", "Tree", "Ball"], "answerIndex": 0, "hint": "Kind words help everyone feel happy."},
+        {"prompt": "Which one is an action word?", "options": ["Run", "Blue", "Book"], "answerIndex": 0, "hint": "Action words tell us what we do."}
+      ],
+      "practicePrompt": "Trace and write: Hello, Thank you, Goodbye",
+      "practiceHint": "Speak each word aloud before writing it.",
+      "audioAsset": "audio/lessons/lesson_english_c2.wav",
+      "translations": {"en": {"title": "Family Words", "story": "A child names family members and greets them kindly each morning."}}
+    },
+    {
+      "id": "class-3-subject-english-activity-story",
+      "classId": "class-3",
+      "subjectId": "english",
+      "title": "Color Parade",
+      "activityType": "story",
+      "story": "Bright colors march across the page: red, blue, green, and yellow.",
+      "flashcards": [
+        {"front": "Hello", "back": "A friendly greeting", "audioAsset": "audio/flashcards/flash_english_1.wav"},
+        {"front": "Goodbye", "back": "A kind way to leave", "audioAsset": "audio/flashcards/flash_english_2.wav"},
+        {"front": "Thank you", "back": "We say it to show kindness"}
+      ],
+      "questions": [
+        {"prompt": "Which word is a greeting?", "options": ["Hello", "Chair", "Milk"], "answerIndex": 0, "hint": "Greetings are words we say when we meet."},
+        {"prompt": "Which word shows kindness?", "options": ["Thank you", "Tree", "Ball"], "answerIndex": 0, "hint": "Kind words help everyone feel happy."},
+        {"prompt": "Which one is an action word?", "options": ["Run", "Blue", "Book"], "answerIndex": 0, "hint": "Action words tell us what we do."}
+      ],
+      "practicePrompt": "Trace and write: Hello, Thank you, Goodbye",
+      "practiceHint": "Speak each word aloud before writing it.",
+      "audioAsset": "audio/lessons/lesson_english_c3.wav",
+      "translations": {"en": {"title": "Color Parade", "story": "Bright colors march across the page: red, blue, green, and yellow."}}
+    },
+    {
+      "id": "class-4-subject-english-activity-story",
+      "classId": "class-4",
+      "subjectId": "english",
+      "title": "Action Words",
+      "activityType": "story",
+      "story": "Little action words jump, run, sit, and clap in a playful story.",
+      "flashcards": [
+        {"front": "Hello", "back": "A friendly greeting", "audioAsset": "audio/flashcards/flash_english_1.wav"},
+        {"front": "Goodbye", "back": "A kind way to leave", "audioAsset": "audio/flashcards/flash_english_2.wav"},
+        {"front": "Thank you", "back": "We say it to show kindness"}
+      ],
+      "questions": [
+        {"prompt": "Which word is a greeting?", "options": ["Hello", "Chair", "Milk"], "answerIndex": 0, "hint": "Greetings are words we say when we meet."},
+        {"prompt": "Which word shows kindness?", "options": ["Thank you", "Tree", "Ball"], "answerIndex": 0, "hint": "Kind words help everyone feel happy."},
+        {"prompt": "Which one is an action word?", "options": ["Run", "Blue", "Book"], "answerIndex": 0, "hint": "Action words tell us what we do."}
+      ],
+      "practicePrompt": "Trace and write: Hello, Thank you, Goodbye",
+      "practiceHint": "Speak each word aloud before writing it.",
+      "audioAsset": "audio/lessons/lesson_english_c4.wav",
+      "translations": {"en": {"title": "Action Words", "story": "Little action words jump, run, sit, and clap in a playful story."}}
+    },
+    {
+      "id": "class-5-subject-english-activity-story",
+      "classId": "class-5",
+      "subjectId": "english",
+      "title": "Little Story Time",
+      "activityType": "story",
+      "story": "A short story shows how words help us talk, share, and learn together.",
+      "flashcards": [
+        {"front": "Hello", "back": "A friendly greeting", "audioAsset": "audio/flashcards/flash_english_1.wav"},
+        {"front": "Goodbye", "back": "A kind way to leave", "audioAsset": "audio/flashcards/flash_english_2.wav"},
+        {"front": "Thank you", "back": "We say it to show kindness"}
+      ],
+      "questions": [
+        {"prompt": "Which word is a greeting?", "options": ["Hello", "Chair", "Milk"], "answerIndex": 0, "hint": "Greetings are words we say when we meet."},
+        {"prompt": "Which word shows kindness?", "options": ["Thank you", "Tree", "Ball"], "answerIndex": 0, "hint": "Kind words help everyone feel happy."},
+        {"prompt": "Which one is an action word?", "options": ["Run", "Blue", "Book"], "answerIndex": 0, "hint": "Action words tell us what we do."}
+      ],
+      "practicePrompt": "Trace and write: Hello, Thank you, Goodbye",
+      "practiceHint": "Speak each word aloud before writing it.",
+      "audioAsset": "audio/lessons/lesson_english_c5.wav",
+      "translations": {"en": {"title": "Little Story Time", "story": "A short story shows how words help us talk, share, and learn together."}}
+    },
+    {
+      "id": "class-1-subject-english_grammar-activity-story",
+      "classId": "class-1",
+      "subjectId": "english_grammar",
+      "title": "Naming Words",
+      "activityType": "story",
+      "story": "Naming words tell us names of people, places, animals, and things.",
+      "flashcards": [
+        {"front": "Noun", "back": "A naming word", "audioAsset": "audio/flashcards/flash_english_grammar_1.wav"},
+        {"front": "Verb", "back": "A doing word", "audioAsset": "audio/flashcards/flash_english_grammar_2.wav"},
+        {"front": "Sentence", "back": "Words that make sense together", "audioAsset": "audio/flashcards/flash_english_grammar_3.wav"}
+      ],
+      "questions": [
+        {"prompt": "Which is a naming word?", "options": ["Dog", "Run", "Quickly"], "answerIndex": 0, "hint": "Naming words tell names."},
+        {"prompt": "Which is a doing word?", "options": ["Jump", "Blue", "Table"], "answerIndex": 0, "hint": "Doing words show action."},
+        {"prompt": "Choose the correct sentence helper.", "options": ["is", "banana", "small"], "answerIndex": 0, "hint": "Use is and are in sentences."}
+      ],
+      "practicePrompt": "Circle the naming words in a book or newspaper.",
+      "practiceHint": "Look for names of people, places, or things.",
+      "audioAsset": "audio/lessons/lesson_english_grammar_c1.wav",
+      "translations": {"en": {"title": "Naming Words", "story": "Naming words tell us names of people, places, animals, and things."}}
+    },
+    {
+      "id": "class-2-subject-english_grammar-activity-story",
+      "classId": "class-2",
+      "subjectId": "english_grammar",
+      "title": "Doing Words",
+      "activityType": "story",
+      "story": "Doing words tell us what someone or something is doing right now.",
+      "flashcards": [
+        {"front": "Noun", "back": "A naming word", "audioAsset": "audio/flashcards/flash_english_grammar_1.wav"},
+        {"front": "Verb", "back": "A doing word", "audioAsset": "audio/flashcards/flash_english_grammar_2.wav"},
+        {"front": "Sentence", "back": "Words that make sense together", "audioAsset": "audio/flashcards/flash_english_grammar_3.wav"}
+      ],
+      "questions": [
+        {"prompt": "Which is a naming word?", "options": ["Dog", "Run", "Quickly"], "answerIndex": 0, "hint": "Naming words tell names."},
+        {"prompt": "Which is a doing word?", "options": ["Jump", "Blue", "Table"], "answerIndex": 0, "hint": "Doing words show action."},
+        {"prompt": "Choose the correct sentence helper.", "options": ["is", "banana", "small"], "answerIndex": 0, "hint": "Use is and are in sentences."}
+      ],
+      "practicePrompt": "Circle the naming words in a book or newspaper.",
+      "practiceHint": "Look for names of people, places, or things.",
+      "audioAsset": "audio/lessons/lesson_english_grammar_c2.wav",
+      "translations": {"en": {"title": "Doing Words", "story": "Doing words tell us what someone or something is doing right now."}}
+    },
+    {
+      "id": "class-3-subject-english_grammar-activity-story",
+      "classId": "class-3",
+      "subjectId": "english_grammar",
+      "title": "This and That",
+      "activityType": "story",
+      "story": "This and that help us point to near and far things.",
+      "flashcards": [
+        {"front": "Noun", "back": "A naming word", "audioAsset": "audio/flashcards/flash_english_grammar_1.wav"},
+        {"front": "Verb", "back": "A doing word", "audioAsset": "audio/flashcards/flash_english_grammar_2.wav"},
+        {"front": "Sentence", "back": "Words that make sense together", "audioAsset": "audio/flashcards/flash_english_grammar_3.wav"}
+      ],
+      "questions": [
+        {"prompt": "Which is a naming word?", "options": ["Dog", "Run", "Quickly"], "answerIndex": 0, "hint": "Naming words tell names."},
+        {"prompt": "Which is a doing word?", "options": ["Jump", "Blue", "Table"], "answerIndex": 0, "hint": "Doing words show action."},
+        {"prompt": "Choose the correct sentence helper.", "options": ["is", "banana", "small"], "answerIndex": 0, "hint": "Use is and are in sentences."}
+      ],
+      "practicePrompt": "Circle the naming words in a book or newspaper.",
+      "practiceHint": "Look for names of people, places, or things.",
+      "audioAsset": "audio/lessons/lesson_english_grammar_c3.wav",
+      "translations": {"en": {"title": "This and That", "story": "This and that help us point to near and far things."}}
+    },
+    {
+      "id": "class-4-subject-english_grammar-activity-story",
+      "classId": "class-4",
+      "subjectId": "english_grammar",
+      "title": "Is and Are",
+      "activityType": "story",
+      "story": "Is and are help us speak in clear and correct sentences.",
+      "flashcards": [
+        {"front": "Noun", "back": "A naming word", "audioAsset": "audio/flashcards/flash_english_grammar_1.wav"},
+        {"front": "Verb", "back": "A doing word", "audioAsset": "audio/flashcards/flash_english_grammar_2.wav"},
+        {"front": "Sentence", "back": "Words that make sense together", "audioAsset": "audio/flashcards/flash_english_grammar_3.wav"}
+      ],
+      "questions": [
+        {"prompt": "Which is a naming word?", "options": ["Dog", "Run", "Quickly"], "answerIndex": 0, "hint": "Naming words tell names."},
+        {"prompt": "Which is a doing word?", "options": ["Jump", "Blue", "Table"], "answerIndex": 0, "hint": "Doing words show action."},
+        {"prompt": "Choose the correct sentence helper.", "options": ["is", "banana", "small"], "answerIndex": 0, "hint": "Use is and are in sentences."}
+      ],
+      "practicePrompt": "Circle the naming words in a book or newspaper.",
+      "practiceHint": "Look for names of people, places, or things.",
+      "audioAsset": "audio/lessons/lesson_english_grammar_c4.wav",
+      "translations": {"en": {"title": "Is and Are", "story": "Is and are help us speak in clear and correct sentences."}}
+    },
+    {
+      "id": "class-5-subject-english_grammar-activity-story",
+      "classId": "class-5",
+      "subjectId": "english_grammar",
+      "title": "Sentence Power",
+      "activityType": "story",
+      "story": "Good grammar helps our sentences sound neat, kind, and clear.",
+      "flashcards": [
+        {"front": "Noun", "back": "A naming word", "audioAsset": "audio/flashcards/flash_english_grammar_1.wav"},
+        {"front": "Verb", "back": "A doing word", "audioAsset": "audio/flashcards/flash_english_grammar_2.wav"},
+        {"front": "Sentence", "back": "Words that make sense together", "audioAsset": "audio/flashcards/flash_english_grammar_3.wav"}
+      ],
+      "questions": [
+        {"prompt": "Which is a naming word?", "options": ["Dog", "Run", "Quickly"], "answerIndex": 0, "hint": "Naming words tell names."},
+        {"prompt": "Which is a doing word?", "options": ["Jump", "Blue", "Table"], "answerIndex": 0, "hint": "Doing words show action."},
+        {"prompt": "Choose the correct sentence helper.", "options": ["is", "banana", "small"], "answerIndex": 0, "hint": "Use is and are in sentences."}
+      ],
+      "practicePrompt": "Circle the naming words in a book or newspaper.",
+      "practiceHint": "Look for names of people, places, or things.",
+      "audioAsset": "audio/lessons/lesson_english_grammar_c5.wav",
+      "translations": {"en": {"title": "Sentence Power", "story": "Good grammar helps our sentences sound neat, kind, and clear."}}
+    },
+    {
+      "id": "class-1-subject-marathi-activity-story",
+      "classId": "class-1",
+      "subjectId": "marathi",
+      "title": "ओळखीचे शब्द",
+      "activityType": "story",
+      "story": "आपण नमस्कार करतो, हसतो, आणि नवीन शब्द शिकतो.",
+      "flashcards": [
+        {"front": "नमस्कार", "back": "Hello", "audioAsset": "audio/flashcards/flash_marathi_1.wav"},
+        {"front": "आई", "back": "Mother", "audioAsset": "audio/flashcards/flash_marathi_2.wav"},
+        {"front": "रंग", "back": "Color", "audioAsset": "audio/flashcards/flash_marathi_3.wav"}
+      ],
+      "questions": [
+        {"prompt": "नमस्कार म्हणजे काय?", "options": ["Hello", "Ball", "Chair"], "answerIndex": 0, "hint": "हे भेटताना म्हणतात."},
+        {"prompt": "आई कोण?", "options": ["Mother", "Book", "Tree"], "answerIndex": 0, "hint": "कुटुंबातील व्यक्ती."},
+        {"prompt": "कोणता शब्द क्रिया आहे?", "options": ["धावणे", "लाल", "घर"], "answerIndex": 0, "hint": "क्रिया म्हणजे काम."}
+      ],
+      "practicePrompt": "नमस्कार, आई, बाबा हे शब्द लिहा.",
+      "practiceHint": "उच्चार करून मग लिहा.",
+      "audioAsset": "audio/lessons/lesson_marathi_c1.wav",
+      "translations": {"mr": {"title": "ओळखीचे शब्द", "story": "आपण नमस्कार करतो, हसतो, आणि नवीन शब्द शिकतो."}}
+    },
+    {
+      "id": "class-2-subject-marathi-activity-story",
+      "classId": "class-2",
+      "subjectId": "marathi",
+      "title": "कुटुंब",
+      "activityType": "story",
+      "story": "आई, बाबा, आणि मित्रांची नावे हळूवारपणे शिकूया.",
+      "flashcards": [
+        {"front": "नमस्कार", "back": "Hello", "audioAsset": "audio/flashcards/flash_marathi_1.wav"},
+        {"front": "आई", "back": "Mother", "audioAsset": "audio/flashcards/flash_marathi_2.wav"},
+        {"front": "रंग", "back": "Color", "audioAsset": "audio/flashcards/flash_marathi_3.wav"}
+      ],
+      "questions": [
+        {"prompt": "नमस्कार म्हणजे काय?", "options": ["Hello", "Ball", "Chair"], "answerIndex": 0, "hint": "हे भेटताना म्हणतात."},
+        {"prompt": "आई कोण?", "options": ["Mother", "Book", "Tree"], "answerIndex": 0, "hint": "कुटुंबातील व्यक्ती."},
+        {"prompt": "कोणता शब्द क्रिया आहे?", "options": ["धावणे", "लाल", "घर"], "answerIndex": 0, "hint": "क्रिया म्हणजे काम."}
+      ],
+      "practicePrompt": "नमस्कार, आई, बाबा हे शब्द लिहा.",
+      "practiceHint": "उच्चार करून मग लिहा.",
+      "audioAsset": "audio/lessons/lesson_marathi_c2.wav",
+      "translations": {"mr": {"title": "कुटुंब", "story": "आई, बाबा, आणि मित्रांची नावे हळूवारपणे शिकूया."}}
+    },
+    {
+      "id": "class-3-subject-marathi-activity-story",
+      "classId": "class-3",
+      "subjectId": "marathi",
+      "title": "रंग",
+      "activityType": "story",
+      "story": "लाल, निळा, हिरवा, पिवळा - रंग आपल्या जगाला सुंदर करतात.",
+      "flashcards": [
+        {"front": "नमस्कार", "back": "Hello", "audioAsset": "audio/flashcards/flash_marathi_1.wav"},
+        {"front": "आई", "back": "Mother", "audioAsset": "audio/flashcards/flash_marathi_2.wav"},
+        {"front": "रंग", "back": "Color", "audioAsset": "audio/flashcards/flash_marathi_3.wav"}
+      ],
+      "questions": [
+        {"prompt": "नमस्कार म्हणजे काय?", "options": ["Hello", "Ball", "Chair"], "answerIndex": 0, "hint": "हे भेटताना म्हणतात."},
+        {"prompt": "आई कोण?", "options": ["Mother", "Book", "Tree"], "answerIndex": 0, "hint": "कुटुंबातील व्यक्ती."},
+        {"prompt": "कोणता शब्द क्रिया आहे?", "options": ["धावणे", "लाल", "घर"], "answerIndex": 0, "hint": "क्रिया म्हणजे काम."}
+      ],
+      "practicePrompt": "नमस्कार, आई, बाबा हे शब्द लिहा.",
+      "practiceHint": "उच्चार करून मग लिहा.",
+      "audioAsset": "audio/lessons/lesson_marathi_c3.wav",
+      "translations": {"mr": {"title": "रंग", "story": "लाल, निळा, हिरवा, पिवळा - रंग आपल्या जगाला सुंदर करतात."}}
+    },
+    {
+      "id": "class-4-subject-marathi-activity-story",
+      "classId": "class-4",
+      "subjectId": "marathi",
+      "title": "क्रिया",
+      "activityType": "story",
+      "story": "धावणे, उडी मारणे, बसणे, लिहिणे ही क्रिया शब्द आहेत.",
+      "flashcards": [
+        {"front": "नमस्कार", "back": "Hello", "audioAsset": "audio/flashcards/flash_marathi_1.wav"},
+        {"front": "आई", "back": "Mother", "audioAsset": "audio/flashcards/flash_marathi_2.wav"},
+        {"front": "रंग", "back": "Color", "audioAsset": "audio/flashcards/flash_marathi_3.wav"}
+      ],
+      "questions": [
+        {"prompt": "नमस्कार म्हणजे काय?", "options": ["Hello", "Ball", "Chair"], "answerIndex": 0, "hint": "हे भेटताना म्हणतात."},
+        {"prompt": "आई कोण?", "options": ["Mother", "Book", "Tree"], "answerIndex": 0, "hint": "कुटुंबातील व्यक्ती."},
+        {"prompt": "कोणता शब्द क्रिया आहे?", "options": ["धावणे", "लाल", "घर"], "answerIndex": 0, "hint": "क्रिया म्हणजे काम."}
+      ],
+      "practicePrompt": "नमस्कार, आई, बाबा हे शब्द लिहा.",
+      "practiceHint": "उच्चार करून मग लिहा.",
+      "audioAsset": "audio/lessons/lesson_marathi_c4.wav",
+      "translations": {"mr": {"title": "क्रिया", "story": "धावणे, उडी मारणे, बसणे, लिहिणे ही क्रिया शब्द आहेत."}}
+    },
+    {
+      "id": "class-5-subject-marathi-activity-story",
+      "classId": "class-5",
+      "subjectId": "marathi",
+      "title": "लहान गोष्ट",
+      "activityType": "story",
+      "story": "एक छोटी गोष्ट आपल्याला बोलणे आणि वाचणे सोपे करते.",
+      "flashcards": [
+        {"front": "नमस्कार", "back": "Hello", "audioAsset": "audio/flashcards/flash_marathi_1.wav"},
+        {"front": "आई", "back": "Mother", "audioAsset": "audio/flashcards/flash_marathi_2.wav"},
+        {"front": "रंग", "back": "Color", "audioAsset": "audio/flashcards/flash_marathi_3.wav"}
+      ],
+      "questions": [
+        {"prompt": "नमस्कार म्हणजे काय?", "options": ["Hello", "Ball", "Chair"], "answerIndex": 0, "hint": "हे भेटताना म्हणतात."},
+        {"prompt": "आई कोण?", "options": ["Mother", "Book", "Tree"], "answerIndex": 0, "hint": "कुटुंबातील व्यक्ती."},
+        {"prompt": "कोणता शब्द क्रिया आहे?", "options": ["धावणे", "लाल", "घर"], "answerIndex": 0, "hint": "क्रिया म्हणजे काम."}
+      ],
+      "practicePrompt": "नमस्कार, आई, बाबा हे शब्द लिहा.",
+      "practiceHint": "उच्चार करून मग लिहा.",
+      "audioAsset": "audio/lessons/lesson_marathi_c5.wav",
+      "translations": {"mr": {"title": "लहान गोष्ट", "story": "एक छोटी गोष्ट आपल्याला बोलणे आणि वाचणे सोपे करते."}}
+    },
+    {
+      "id": "class-1-subject-hindi-activity-story",
+      "classId": "class-1",
+      "subjectId": "hindi",
+      "title": "मेरा परिचय",
+      "activityType": "story",
+      "story": "हम नमस्ते कहते हैं और नए शब्द सीखते हैं।",
+      "flashcards": [
+        {"front": "नमस्ते", "back": "Hello", "audioAsset": "audio/flashcards/flash_hindi_1.wav"},
+        {"front": "माँ", "back": "Mother", "audioAsset": "audio/flashcards/flash_hindi_2.wav"},
+        {"front": "रंग", "back": "Color", "audioAsset": "audio/flashcards/flash_hindi_3.wav"}
+      ],
+      "questions": [
+        {"prompt": "नमस्ते क्या है?", "options": ["Greeting", "Toy", "Table"], "answerIndex": 0, "hint": "यह मिलने पर कहते हैं।"},
+        {"prompt": "क्रिया शब्द कौन सा है?", "options": ["दौड़ना", "किताब", "लाल"], "answerIndex": 0, "hint": "क्रिया काम बताती है।"},
+        {"prompt": "परिवार में कौन आता है?", "options": ["माँ", "गेंद", "पेंसिल"], "answerIndex": 0, "hint": "परिवार के सदस्य।"}
+      ],
+      "practicePrompt": "नमस्ते, माँ, पिता लिखो और बोलो.",
+      "practiceHint": "धीरे-धीरे अक्षर बनाओ.",
+      "audioAsset": "audio/lessons/lesson_hindi_c1.wav",
+      "translations": {"hi": {"title": "मेरा परिचय", "story": "हम नमस्ते कहते हैं और नए शब्द सीखते हैं।"}}
+    },
+    {
+      "id": "class-2-subject-hindi-activity-story",
+      "classId": "class-2",
+      "subjectId": "hindi",
+      "title": "परिवार",
+      "activityType": "story",
+      "story": "परिवार के नाम हमें प्यार और साथ का एहसास देते हैं।",
+      "flashcards": [
+        {"front": "नमस्ते", "back": "Hello", "audioAsset": "audio/flashcards/flash_hindi_1.wav"},
+        {"front": "माँ", "back": "Mother", "audioAsset": "audio/flashcards/flash_hindi_2.wav"},
+        {"front": "रंग", "back": "Color", "audioAsset": "audio/flashcards/flash_hindi_3.wav"}
+      ],
+      "questions": [
+        {"prompt": "नमस्ते क्या है?", "options": ["Greeting", "Toy", "Table"], "answerIndex": 0, "hint": "यह मिलने पर कहते हैं।"},
+        {"prompt": "क्रिया शब्द कौन सा है?", "options": ["दौड़ना", "किताब", "लाल"], "answerIndex": 0, "hint": "क्रिया काम बताती है।"},
+        {"prompt": "परिवार में कौन आता है?", "options": ["माँ", "गेंद", "पेंसिल"], "answerIndex": 0, "hint": "परिवार के सदस्य।"}
+      ],
+      "practicePrompt": "नमस्ते, माँ, पिता लिखो और बोलो.",
+      "practiceHint": "धीरे-धीरे अक्षर बनाओ.",
+      "audioAsset": "audio/lessons/lesson_hindi_c2.wav",
+      "translations": {"hi": {"title": "परिवार", "story": "परिवार के नाम हमें प्यार और साथ का एहसास देते हैं।"}}
+    },
+    {
+      "id": "class-3-subject-hindi-activity-story",
+      "classId": "class-3",
+      "subjectId": "hindi",
+      "title": "रंग",
+      "activityType": "story",
+      "story": "लाल, नीला, हरा, पीला जैसे रंग दुनिया को सुंदर बनाते हैं।",
+      "flashcards": [
+        {"front": "नमस्ते", "back": "Hello", "audioAsset": "audio/flashcards/flash_hindi_1.wav"},
+        {"front": "माँ", "back": "Mother", "audioAsset": "audio/flashcards/flash_hindi_2.wav"},
+        {"front": "रंग", "back": "Color", "audioAsset": "audio/flashcards/flash_hindi_3.wav"}
+      ],
+      "questions": [
+        {"prompt": "नमस्ते क्या है?", "options": ["Greeting", "Toy", "Table"], "answerIndex": 0, "hint": "यह मिलने पर कहते हैं।"},
+        {"prompt": "क्रिया शब्द कौन सा है?", "options": ["दौड़ना", "किताब", "लाल"], "answerIndex": 0, "hint": "क्रिया काम बताती है।"},
+        {"prompt": "परिवार में कौन आता है?", "options": ["माँ", "गेंद", "पेंसिल"], "answerIndex": 0, "hint": "परिवार के सदस्य।"}
+      ],
+      "practicePrompt": "नमस्ते, माँ, पिता लिखो और बोलो.",
+      "practiceHint": "धीरे-धीरे अक्षर बनाओ.",
+      "audioAsset": "audio/lessons/lesson_hindi_c3.wav",
+      "translations": {"hi": {"title": "रंग", "story": "लाल, नीला, हरा, पीला जैसे रंग दुनिया को सुंदर बनाते हैं।"}}
+    },
+    {
+      "id": "class-4-subject-hindi-activity-story",
+      "classId": "class-4",
+      "subjectId": "hindi",
+      "title": "क्रिया",
+      "activityType": "story",
+      "story": "चलना, लिखना, बोलना, गाना सब क्रिया शब्द हैं।",
+      "flashcards": [
+        {"front": "नमस्ते", "back": "Hello", "audioAsset": "audio/flashcards/flash_hindi_1.wav"},
+        {"front": "माँ", "back": "Mother", "audioAsset": "audio/flashcards/flash_hindi_2.wav"},
+        {"front": "रंग", "back": "Color", "audioAsset": "audio/flashcards/flash_hindi_3.wav"}
+      ],
+      "questions": [
+        {"prompt": "नमस्ते क्या है?", "options": ["Greeting", "Toy", "Table"], "answerIndex": 0, "hint": "यह मिलने पर कहते हैं।"},
+        {"prompt": "क्रिया शब्द कौन सा है?", "options": ["दौड़ना", "किताब", "लाल"], "answerIndex": 0, "hint": "क्रिया काम बताती है।"},
+        {"prompt": "परिवार में कौन आता है?", "options": ["माँ", "गेंद", "पेंसिल"], "answerIndex": 0, "hint": "परिवार के सदस्य।"}
+      ],
+      "practicePrompt": "नमस्ते, माँ, पिता लिखो और बोलो.",
+      "practiceHint": "धीरे-धीरे अक्षर बनाओ.",
+      "audioAsset": "audio/lessons/lesson_hindi_c4.wav",
+      "translations": {"hi": {"title": "क्रिया", "story": "चलना, लिखना, बोलना, गाना सब क्रिया शब्द हैं।"}}
+    },
+    {
+      "id": "class-5-subject-hindi-activity-story",
+      "classId": "class-5",
+      "subjectId": "hindi",
+      "title": "छोटी कहानी",
+      "activityType": "story",
+      "story": "छोटी कहानी पढ़कर हम शब्द और वाक्य समझते हैं।",
+      "flashcards": [
+        {"front": "नमस्ते", "back": "Hello", "audioAsset": "audio/flashcards/flash_hindi_1.wav"},
+        {"front": "माँ", "back": "Mother", "audioAsset": "audio/flashcards/flash_hindi_2.wav"},
+        {"front": "रंग", "back": "Color", "audioAsset": "audio/flashcards/flash_hindi_3.wav"}
+      ],
+      "questions": [
+        {"prompt": "नमस्ते क्या है?", "options": ["Greeting", "Toy", "Table"], "answerIndex": 0, "hint": "यह मिलने पर कहते हैं।"},
+        {"prompt": "क्रिया शब्द कौन सा है?", "options": ["दौड़ना", "किताब", "लाल"], "answerIndex": 0, "hint": "क्रिया काम बताती है।"},
+        {"prompt": "परिवार में कौन आता है?", "options": ["माँ", "गेंद", "पेंसिल"], "answerIndex": 0, "hint": "परिवार के सदस्य।"}
+      ],
+      "practicePrompt": "नमस्ते, माँ, पिता लिखो और बोलो.",
+      "practiceHint": "धीरे-धीरे अक्षर बनाओ.",
+      "audioAsset": "audio/lessons/lesson_hindi_c5.wav",
+      "translations": {"hi": {"title": "छोटी कहानी", "story": "छोटी कहानी पढ़कर हम शब्द और वाक्य समझते हैं।"}}
+    },
+    {
+      "id": "class-1-subject-mathematics-activity-story",
+      "classId": "class-1",
+      "subjectId": "mathematics",
+      "title": "Numbers 1-10",
+      "activityType": "story",
+      "story": "We count apples, stars, and toys from one to ten.",
+      "flashcards": [
+        {"front": "1 + 1", "back": "2", "audioAsset": "audio/flashcards/flash_mathematics_1.wav"},
+        {"front": "Circle", "back": "Round shape", "audioAsset": "audio/flashcards/flash_mathematics_2.wav"},
+        {"front": "Big", "back": "Larger in size", "audioAsset": "audio/flashcards/flash_mathematics_3.wav"}
+      ],
+      "questions": [
+        {"prompt": "What is 2 + 1?", "options": ["3", "4", "5"], "answerIndex": 0, "hint": "Count one more."},
+        {"prompt": "Which is a shape?", "options": ["Square", "Run", "Blue"], "answerIndex": 0, "hint": "Shapes have sides or curves."},
+        {"prompt": "Which number comes after 4?", "options": ["5", "3", "2"], "answerIndex": 0, "hint": "Count forward one step."}
+      ],
+      "practicePrompt": "Count 5 objects at home and write the number.",
+      "practiceHint": "Say each object once while counting.",
+      "audioAsset": "audio/lessons/lesson_mathematics_c1.wav",
+      "translations": {"en": {"title": "Numbers 1-10", "story": "We count apples, stars, and toys from one to ten."}}
+    },
+    {
+      "id": "class-2-subject-mathematics-activity-story",
+      "classId": "class-2",
+      "subjectId": "mathematics",
+      "title": "Add and Count",
+      "activityType": "story",
+      "story": "Two groups can join together and make a bigger group.",
+      "flashcards": [
+        {"front": "1 + 1", "back": "2", "audioAsset": "audio/flashcards/flash_mathematics_1.wav"},
+        {"front": "Circle", "back": "Round shape", "audioAsset": "audio/flashcards/flash_mathematics_2.wav"},
+        {"front": "Big", "back": "Larger in size", "audioAsset": "audio/flashcards/flash_mathematics_3.wav"}
+      ],
+      "questions": [
+        {"prompt": "What is 2 + 1?", "options": ["3", "4", "5"], "answerIndex": 0, "hint": "Count one more."},
+        {"prompt": "Which is a shape?", "options": ["Square", "Run", "Blue"], "answerIndex": 0, "hint": "Shapes have sides or curves."},
+        {"prompt": "Which number comes after 4?", "options": ["5", "3", "2"], "answerIndex": 0, "hint": "Count forward one step."}
+      ],
+      "practicePrompt": "Count 5 objects at home and write the number.",
+      "practiceHint": "Say each object once while counting.",
+      "audioAsset": "audio/lessons/lesson_mathematics_c2.wav",
+      "translations": {"en": {"title": "Add and Count", "story": "Two groups can join together and make a bigger group."}}
+    },
+    {
+      "id": "class-3-subject-mathematics-activity-story",
+      "classId": "class-3",
+      "subjectId": "mathematics",
+      "title": "Shapes Around Us",
+      "activityType": "story",
+      "story": "Circles, squares, triangles, and rectangles are fun shapes.",
+      "flashcards": [
+        {"front": "1 + 1", "back": "2", "audioAsset": "audio/flashcards/flash_mathematics_1.wav"},
+        {"front": "Circle", "back": "Round shape", "audioAsset": "audio/flashcards/flash_mathematics_2.wav"},
+        {"front": "Big", "back": "Larger in size", "audioAsset": "audio/flashcards/flash_mathematics_3.wav"}
+      ],
+      "questions": [
+        {"prompt": "What is 2 + 1?", "options": ["3", "4", "5"], "answerIndex": 0, "hint": "Count one more."},
+        {"prompt": "Which is a shape?", "options": ["Square", "Run", "Blue"], "answerIndex": 0, "hint": "Shapes have sides or curves."},
+        {"prompt": "Which number comes after 4?", "options": ["5", "3", "2"], "answerIndex": 0, "hint": "Count forward one step."}
+      ],
+      "practicePrompt": "Count 5 objects at home and write the number.",
+      "practiceHint": "Say each object once while counting.",
+      "audioAsset": "audio/lessons/lesson_mathematics_c3.wav",
+      "translations": {"en": {"title": "Shapes Around Us", "story": "Circles, squares, triangles, and rectangles are fun shapes."}}
+    },
+    {
+      "id": "class-4-subject-mathematics-activity-story",
+      "classId": "class-4",
+      "subjectId": "mathematics",
+      "title": "Big and Small",
+      "activityType": "story",
+      "story": "Some things are bigger, some are smaller, and we can compare them.",
+      "flashcards": [
+        {"front": "1 + 1", "back": "2", "audioAsset": "audio/flashcards/flash_mathematics_1.wav"},
+        {"front": "Circle", "back": "Round shape", "audioAsset": "audio/flashcards/flash_mathematics_2.wav"},
+        {"front": "Big", "back": "Larger in size", "audioAsset": "audio/flashcards/flash_mathematics_3.wav"}
+      ],
+      "questions": [
+        {"prompt": "What is 2 + 1?", "options": ["3", "4", "5"], "answerIndex": 0, "hint": "Count one more."},
+        {"prompt": "Which is a shape?", "options": ["Square", "Run", "Blue"], "answerIndex": 0, "hint": "Shapes have sides or curves."},
+        {"prompt": "Which number comes after 4?", "options": ["5", "3", "2"], "answerIndex": 0, "hint": "Count forward one step."}
+      ],
+      "practicePrompt": "Count 5 objects at home and write the number.",
+      "practiceHint": "Say each object once while counting.",
+      "audioAsset": "audio/lessons/lesson_mathematics_c4.wav",
+      "translations": {"en": {"title": "Big and Small", "story": "Some things are bigger, some are smaller, and we can compare them."}}
+    },
+    {
+      "id": "class-5-subject-mathematics-activity-story",
+      "classId": "class-5",
+      "subjectId": "mathematics",
+      "title": "Money and Time",
+      "activityType": "story",
+      "story": "Numbers help us read time, compare money, and solve small problems.",
+      "flashcards": [
+        {"front": "1 + 1", "back": "2", "audioAsset": "audio/flashcards/flash_mathematics_1.wav"},
+        {"front": "Circle", "back": "Round shape", "audioAsset": "audio/flashcards/flash_mathematics_2.wav"},
+        {"front": "Big", "back": "Larger in size", "audioAsset": "audio/flashcards/flash_mathematics_3.wav"}
+      ],
+      "questions": [
+        {"prompt": "What is 2 + 1?", "options": ["3", "4", "5"], "answerIndex": 0, "hint": "Count one more."},
+        {"prompt": "Which is a shape?", "options": ["Square", "Run", "Blue"], "answerIndex": 0, "hint": "Shapes have sides or curves."},
+        {"prompt": "Which number comes after 4?", "options": ["5", "3", "2"], "answerIndex": 0, "hint": "Count forward one step."}
+      ],
+      "practicePrompt": "Count 5 objects at home and write the number.",
+      "practiceHint": "Say each object once while counting.",
+      "audioAsset": "audio/lessons/lesson_mathematics_c5.wav",
+      "translations": {"en": {"title": "Money and Time", "story": "Numbers help us read time, compare money, and solve small problems."}}
+    },
+    {
+      "id": "class-1-subject-evs-activity-story",
+      "classId": "class-1",
+      "subjectId": "evs",
+      "title": "My Body",
+      "activityType": "story",
+      "story": "Our eyes, ears, nose, hands, and legs help us every day.",
+      "flashcards": [
+        {"front": "Eyes", "back": "We see with them", "audioAsset": "audio/flashcards/flash_evs_1.wav"},
+        {"front": "Food", "back": "Gives energy", "audioAsset": "audio/flashcards/flash_evs_2.wav"},
+        {"front": "Plant", "back": "Needs water and sunlight", "audioAsset": "audio/flashcards/flash_evs_3.wav"}
+      ],
+      "questions": [
+        {"prompt": "What do we use to see?", "options": ["Eyes", "Feet", "Teeth"], "answerIndex": 0, "hint": "Think about looking."},
+        {"prompt": "What helps plants grow?", "options": ["Water", "Sand", "Ice"], "answerIndex": 0, "hint": "Plants need water."},
+        {"prompt": "Where do we live safely?", "options": ["Home", "Cloud", "Road"], "answerIndex": 0, "hint": "Home is our safe place."}
+      ],
+      "practicePrompt": "Draw your favorite plant and label it.",
+      "practiceHint": "Add leaves, stem, and a flower.",
+      "audioAsset": "audio/lessons/lesson_evs_c1.wav",
+      "translations": {"en": {"title": "My Body", "story": "Our eyes, ears, nose, hands, and legs help us every day."}}
+    },
+    {
+      "id": "class-2-subject-evs-activity-story",
+      "classId": "class-2",
+      "subjectId": "evs",
+      "title": "My Food",
+      "activityType": "story",
+      "story": "Healthy food gives us energy to play and learn.",
+      "flashcards": [
+        {"front": "Eyes", "back": "We see with them", "audioAsset": "audio/flashcards/flash_evs_1.wav"},
+        {"front": "Food", "back": "Gives energy", "audioAsset": "audio/flashcards/flash_evs_2.wav"},
+        {"front": "Plant", "back": "Needs water and sunlight", "audioAsset": "audio/flashcards/flash_evs_3.wav"}
+      ],
+      "questions": [
+        {"prompt": "What do we use to see?", "options": ["Eyes", "Feet", "Teeth"], "answerIndex": 0, "hint": "Think about looking."},
+        {"prompt": "What helps plants grow?", "options": ["Water", "Sand", "Ice"], "answerIndex": 0, "hint": "Plants need water."},
+        {"prompt": "Where do we live safely?", "options": ["Home", "Cloud", "Road"], "answerIndex": 0, "hint": "Home is our safe place."}
+      ],
+      "practicePrompt": "Draw your favorite plant and label it.",
+      "practiceHint": "Add leaves, stem, and a flower.",
+      "audioAsset": "audio/lessons/lesson_evs_c2.wav",
+      "translations": {"en": {"title": "My Food", "story": "Healthy food gives us energy to play and learn."}}
+    },
+    {
+      "id": "class-3-subject-evs-activity-story",
+      "classId": "class-3",
+      "subjectId": "evs",
+      "title": "My Home",
+      "activityType": "story",
+      "story": "A home keeps us safe, warm, and happy.",
+      "flashcards": [
+        {"front": "Eyes", "back": "We see with them", "audioAsset": "audio/flashcards/flash_evs_1.wav"},
+        {"front": "Food", "back": "Gives energy", "audioAsset": "audio/flashcards/flash_evs_2.wav"},
+        {"front": "Plant", "back": "Needs water and sunlight", "audioAsset": "audio/flashcards/flash_evs_3.wav"}
+      ],
+      "questions": [
+        {"prompt": "What do we use to see?", "options": ["Eyes", "Feet", "Teeth"], "answerIndex": 0, "hint": "Think about looking."},
+        {"prompt": "What helps plants grow?", "options": ["Water", "Sand", "Ice"], "answerIndex": 0, "hint": "Plants need water."},
+        {"prompt": "Where do we live safely?", "options": ["Home", "Cloud", "Road"], "answerIndex": 0, "hint": "Home is our safe place."}
+      ],
+      "practicePrompt": "Draw your favorite plant and label it.",
+      "practiceHint": "Add leaves, stem, and a flower.",
+      "audioAsset": "audio/lessons/lesson_evs_c3.wav",
+      "translations": {"en": {"title": "My Home", "story": "A home keeps us safe, warm, and happy."}}
+    },
+    {
+      "id": "class-4-subject-evs-activity-story",
+      "classId": "class-4",
+      "subjectId": "evs",
+      "title": "Plants",
+      "activityType": "story",
+      "story": "Plants need water, sunlight, and care to grow well.",
+      "flashcards": [
+        {"front": "Eyes", "back": "We see with them", "audioAsset": "audio/flashcards/flash_evs_1.wav"},
+        {"front": "Food", "back": "Gives energy", "audioAsset": "audio/flashcards/flash_evs_2.wav"},
+        {"front": "Plant", "back": "Needs water and sunlight", "audioAsset": "audio/flashcards/flash_evs_3.wav"}
+      ],
+      "questions": [
+        {"prompt": "What do we use to see?", "options": ["Eyes", "Feet", "Teeth"], "answerIndex": 0, "hint": "Think about looking."},
+        {"prompt": "What helps plants grow?", "options": ["Water", "Sand", "Ice"], "answerIndex": 0, "hint": "Plants need water."},
+        {"prompt": "Where do we live safely?", "options": ["Home", "Cloud", "Road"], "answerIndex": 0, "hint": "Home is our safe place."}
+      ],
+      "practicePrompt": "Draw your favorite plant and label it.",
+      "practiceHint": "Add leaves, stem, and a flower.",
+      "audioAsset": "audio/lessons/lesson_evs_c4.wav",
+      "translations": {"en": {"title": "Plants", "story": "Plants need water, sunlight, and care to grow well."}}
+    },
+    {
+      "id": "class-5-subject-evs-activity-story",
+      "classId": "class-5",
+      "subjectId": "evs",
+      "title": "Animals and Care",
+      "activityType": "story",
+      "story": "Animals live in many places and need our love and kindness.",
+      "flashcards": [
+        {"front": "Eyes", "back": "We see with them", "audioAsset": "audio/flashcards/flash_evs_1.wav"},
+        {"front": "Food", "back": "Gives energy", "audioAsset": "audio/flashcards/flash_evs_2.wav"},
+        {"front": "Plant", "back": "Needs water and sunlight", "audioAsset": "audio/flashcards/flash_evs_3.wav"}
+      ],
+      "questions": [
+        {"prompt": "What do we use to see?", "options": ["Eyes", "Feet", "Teeth"], "answerIndex": 0, "hint": "Think about looking."},
+        {"prompt": "What helps plants grow?", "options": ["Water", "Sand", "Ice"], "answerIndex": 0, "hint": "Plants need water."},
+        {"prompt": "Where do we live safely?", "options": ["Home", "Cloud", "Road"], "answerIndex": 0, "hint": "Home is our safe place."}
+      ],
+      "practicePrompt": "Draw your favorite plant and label it.",
+      "practiceHint": "Add leaves, stem, and a flower.",
+      "audioAsset": "audio/lessons/lesson_evs_c5.wav",
+      "translations": {"en": {"title": "Animals and Care", "story": "Animals live in many places and need our love and kindness."}}
+    },
+    {
+      "id": "class-1-subject-computer-activity-story",
+      "classId": "class-1",
+      "subjectId": "computer",
+      "title": "Computer Parts",
+      "activityType": "story",
+      "story": "A computer has a screen, keyboard, and mouse that work together.",
+      "flashcards": [
+        {"front": "Screen", "back": "Shows pictures and words", "audioAsset": "audio/flashcards/flash_computer_1.wav"},
+        {"front": "Keyboard", "back": "Used for typing", "audioAsset": "audio/flashcards/flash_computer_2.wav"},
+        {"front": "Mouse", "back": "Used for clicking", "audioAsset": "audio/flashcards/flash_computer_3.wav"}
+      ],
+      "questions": [
+        {"prompt": "Which part helps you type?", "options": ["Keyboard", "Screen", "Fan"], "answerIndex": 0, "hint": "It has many keys."},
+        {"prompt": "Which part helps you click?", "options": ["Mouse", "Chair", "Book"], "answerIndex": 0, "hint": "It moves on the table."},
+        {"prompt": "What should you do after some time?", "options": ["Take a break", "Shout", "Run away"], "answerIndex": 0, "hint": "Safe use means breaks."}
+      ],
+      "practicePrompt": "Draw a computer and label screen, keyboard, mouse.",
+      "practiceHint": "Keep lines big and clear.",
+      "audioAsset": "audio/lessons/lesson_computer_c1.wav",
+      "translations": {"en": {"title": "Computer Parts", "story": "A computer has a screen, keyboard, and mouse that work together."}}
+    },
+    {
+      "id": "class-2-subject-computer-activity-story",
+      "classId": "class-2",
+      "subjectId": "computer",
+      "title": "Keyboard Fun",
+      "activityType": "story",
+      "story": "We type letters on the keyboard to make words and numbers.",
+      "flashcards": [
+        {"front": "Screen", "back": "Shows pictures and words", "audioAsset": "audio/flashcards/flash_computer_1.wav"},
+        {"front": "Keyboard", "back": "Used for typing", "audioAsset": "audio/flashcards/flash_computer_2.wav"},
+        {"front": "Mouse", "back": "Used for clicking", "audioAsset": "audio/flashcards/flash_computer_3.wav"}
+      ],
+      "questions": [
+        {"prompt": "Which part helps you type?", "options": ["Keyboard", "Screen", "Fan"], "answerIndex": 0, "hint": "It has many keys."},
+        {"prompt": "Which part helps you click?", "options": ["Mouse", "Chair", "Book"], "answerIndex": 0, "hint": "It moves on the table."},
+        {"prompt": "What should you do after some time?", "options": ["Take a break", "Shout", "Run away"], "answerIndex": 0, "hint": "Safe use means breaks."}
+      ],
+      "practicePrompt": "Draw a computer and label screen, keyboard, mouse.",
+      "practiceHint": "Keep lines big and clear.",
+      "audioAsset": "audio/lessons/lesson_computer_c2.wav",
+      "translations": {"en": {"title": "Keyboard Fun", "story": "We type letters on the keyboard to make words and numbers."}}
+    },
+    {
+      "id": "class-3-subject-computer-activity-story",
+      "classId": "class-3",
+      "subjectId": "computer",
+      "title": "Mouse Moves",
+      "activityType": "story",
+      "story": "The mouse helps us click, choose, and move around the screen.",
+      "flashcards": [
+        {"front": "Screen", "back": "Shows pictures and words", "audioAsset": "audio/flashcards/flash_computer_1.wav"},
+        {"front": "Keyboard", "back": "Used for typing", "audioAsset": "audio/flashcards/flash_computer_2.wav"},
+        {"front": "Mouse", "back": "Used for clicking", "audioAsset": "audio/flashcards/flash_computer_3.wav"}
+      ],
+      "questions": [
+        {"prompt": "Which part helps you type?", "options": ["Keyboard", "Screen", "Fan"], "answerIndex": 0, "hint": "It has many keys."},
+        {"prompt": "Which part helps you click?", "options": ["Mouse", "Chair", "Book"], "answerIndex": 0, "hint": "It moves on the table."},
+        {"prompt": "What should you do after some time?", "options": ["Take a break", "Shout", "Run away"], "answerIndex": 0, "hint": "Safe use means breaks."}
+      ],
+      "practicePrompt": "Draw a computer and label screen, keyboard, mouse.",
+      "practiceHint": "Keep lines big and clear.",
+      "audioAsset": "audio/lessons/lesson_computer_c3.wav",
+      "translations": {"en": {"title": "Mouse Moves", "story": "The mouse helps us click, choose, and move around the screen."}}
+    },
+    {
+      "id": "class-4-subject-computer-activity-story",
+      "classId": "class-4",
+      "subjectId": "computer",
+      "title": "Paint and Draw",
+      "activityType": "story",
+      "story": "We can draw, color, and create pictures with simple apps.",
+      "flashcards": [
+        {"front": "Screen", "back": "Shows pictures and words", "audioAsset": "audio/flashcards/flash_computer_1.wav"},
+        {"front": "Keyboard", "back": "Used for typing", "audioAsset": "audio/flashcards/flash_computer_2.wav"},
+        {"front": "Mouse", "back": "Used for clicking", "audioAsset": "audio/flashcards/flash_computer_3.wav"}
+      ],
+      "questions": [
+        {"prompt": "Which part helps you type?", "options": ["Keyboard", "Screen", "Fan"], "answerIndex": 0, "hint": "It has many keys."},
+        {"prompt": "Which part helps you click?", "options": ["Mouse", "Chair", "Book"], "answerIndex": 0, "hint": "It moves on the table."},
+        {"prompt": "What should you do after some time?", "options": ["Take a break", "Shout", "Run away"], "answerIndex": 0, "hint": "Safe use means breaks."}
+      ],
+      "practicePrompt": "Draw a computer and label screen, keyboard, mouse.",
+      "practiceHint": "Keep lines big and clear.",
+      "audioAsset": "audio/lessons/lesson_computer_c4.wav",
+      "translations": {"en": {"title": "Paint and Draw", "story": "We can draw, color, and create pictures with simple apps."}}
+    },
+    {
+      "id": "class-5-subject-computer-activity-story",
+      "classId": "class-5",
+      "subjectId": "computer",
+      "title": "Safe Use",
+      "activityType": "story",
+      "story": "Safe computer use means sitting well, taking breaks, and asking adults for help.",
+      "flashcards": [
+        {"front": "Screen", "back": "Shows pictures and words", "audioAsset": "audio/flashcards/flash_computer_1.wav"},
+        {"front": "Keyboard", "back": "Used for typing", "audioAsset": "audio/flashcards/flash_computer_2.wav"},
+        {"front": "Mouse", "back": "Used for clicking", "audioAsset": "audio/flashcards/flash_computer_3.wav"}
+      ],
+      "questions": [
+        {"prompt": "Which part helps you type?", "options": ["Keyboard", "Screen", "Fan"], "answerIndex": 0, "hint": "It has many keys."},
+        {"prompt": "Which part helps you click?", "options": ["Mouse", "Chair", "Book"], "answerIndex": 0, "hint": "It moves on the table."},
+        {"prompt": "What should you do after some time?", "options": ["Take a break", "Shout", "Run away"], "answerIndex": 0, "hint": "Safe use means breaks."}
+      ],
+      "practicePrompt": "Draw a computer and label screen, keyboard, mouse.",
+      "practiceHint": "Keep lines big and clear.",
+      "audioAsset": "audio/lessons/lesson_computer_c5.wav",
+      "translations": {"en": {"title": "Safe Use", "story": "Safe computer use means sitting well, taking breaks, and asking adults for help."}}
+    },
+    {
+      "id": "class-1-subject-gk-activity-story",
+      "classId": "class-1",
+      "subjectId": "gk",
+      "title": "My Country",
+      "activityType": "story",
+      "story": "Our country has many languages, foods, and happy people.",
+      "flashcards": [
+        {"front": "Country", "back": "A place where people live", "audioAsset": "audio/flashcards/flash_gk_1.wav"},
+        {"front": "Helper", "back": "A person who helps", "audioAsset": "audio/flashcards/flash_gk_2.wav"},
+        {"front": "Season", "back": "Weather changes", "audioAsset": "audio/flashcards/flash_gk_3.wav"}
+      ],
+      "questions": [
+        {"prompt": "Who helps us learn?", "options": ["Teacher", "Stone", "Cloud"], "answerIndex": 0, "hint": "Think of school."},
+        {"prompt": "Which is a season?", "options": ["Winter", "Pencil", "Bottle"], "answerIndex": 0, "hint": "It changes weather."},
+        {"prompt": "Which one is transport?", "options": ["Train", "Apple", "Chair"], "answerIndex": 0, "hint": "It moves people."}
+      ],
+      "practicePrompt": "Name 3 helpers in your area.",
+      "practiceHint": "Think school, home, and neighborhood.",
+      "audioAsset": "audio/lessons/lesson_gk_c1.wav",
+      "translations": {"en": {"title": "My Country", "story": "Our country has many languages, foods, and happy people."}}
+    },
+    {
+      "id": "class-2-subject-gk-activity-story",
+      "classId": "class-2",
+      "subjectId": "gk",
+      "title": "Helpers Around Us",
+      "activityType": "story",
+      "story": "Doctors, teachers, farmers, and drivers help our world.",
+      "flashcards": [
+        {"front": "Country", "back": "A place where people live", "audioAsset": "audio/flashcards/flash_gk_1.wav"},
+        {"front": "Helper", "back": "A person who helps", "audioAsset": "audio/flashcards/flash_gk_2.wav"},
+        {"front": "Season", "back": "Weather changes", "audioAsset": "audio/flashcards/flash_gk_3.wav"}
+      ],
+      "questions": [
+        {"prompt": "Who helps us learn?", "options": ["Teacher", "Stone", "Cloud"], "answerIndex": 0, "hint": "Think of school."},
+        {"prompt": "Which is a season?", "options": ["Winter", "Pencil", "Bottle"], "answerIndex": 0, "hint": "It changes weather."},
+        {"prompt": "Which one is transport?", "options": ["Train", "Apple", "Chair"], "answerIndex": 0, "hint": "It moves people."}
+      ],
+      "practicePrompt": "Name 3 helpers in your area.",
+      "practiceHint": "Think school, home, and neighborhood.",
+      "audioAsset": "audio/lessons/lesson_gk_c2.wav",
+      "translations": {"en": {"title": "Helpers Around Us", "story": "Doctors, teachers, farmers, and drivers help our world."}}
+    },
+    {
+      "id": "class-3-subject-gk-activity-story",
+      "classId": "class-3",
+      "subjectId": "gk",
+      "title": "Seasons",
+      "activityType": "story",
+      "story": "Summer, rainy, winter, and spring bring different weather.",
+      "flashcards": [
+        {"front": "Country", "back": "A place where people live", "audioAsset": "audio/flashcards/flash_gk_1.wav"},
+        {"front": "Helper", "back": "A person who helps", "audioAsset": "audio/flashcards/flash_gk_2.wav"},
+        {"front": "Season", "back": "Weather changes", "audioAsset": "audio/flashcards/flash_gk_3.wav"}
+      ],
+      "questions": [
+        {"prompt": "Who helps us learn?", "options": ["Teacher", "Stone", "Cloud"], "answerIndex": 0, "hint": "Think of school."},
+        {"prompt": "Which is a season?", "options": ["Winter", "Pencil", "Bottle"], "answerIndex": 0, "hint": "It changes weather."},
+        {"prompt": "Which one is transport?", "options": ["Train", "Apple", "Chair"], "answerIndex": 0, "hint": "It moves people."}
+      ],
+      "practicePrompt": "Name 3 helpers in your area.",
+      "practiceHint": "Think school, home, and neighborhood.",
+      "audioAsset": "audio/lessons/lesson_gk_c3.wav",
+      "translations": {"en": {"title": "Seasons", "story": "Summer, rainy, winter, and spring bring different weather."}}
+    },
+    {
+      "id": "class-4-subject-gk-activity-story",
+      "classId": "class-4",
+      "subjectId": "gk",
+      "title": "Transport",
+      "activityType": "story",
+      "story": "Bus, bike, car, train, and plane take us to new places.",
+      "flashcards": [
+        {"front": "Country", "back": "A place where people live", "audioAsset": "audio/flashcards/flash_gk_1.wav"},
+        {"front": "Helper", "back": "A person who helps", "audioAsset": "audio/flashcards/flash_gk_2.wav"},
+        {"front": "Season", "back": "Weather changes", "audioAsset": "audio/flashcards/flash_gk_3.wav"}
+      ],
+      "questions": [
+        {"prompt": "Who helps us learn?", "options": ["Teacher", "Stone", "Cloud"], "answerIndex": 0, "hint": "Think of school."},
+        {"prompt": "Which is a season?", "options": ["Winter", "Pencil", "Bottle"], "answerIndex": 0, "hint": "It changes weather."},
+        {"prompt": "Which one is transport?", "options": ["Train", "Apple", "Chair"], "answerIndex": 0, "hint": "It moves people."}
+      ],
+      "practicePrompt": "Name 3 helpers in your area.",
+      "practiceHint": "Think school, home, and neighborhood.",
+      "audioAsset": "audio/lessons/lesson_gk_c4.wav",
+      "translations": {"en": {"title": "Transport", "story": "Bus, bike, car, train, and plane take us to new places."}}
+    },
+    {
+      "id": "class-5-subject-gk-activity-story",
+      "classId": "class-5",
+      "subjectId": "gk",
+      "title": "Festivals",
+      "activityType": "story",
+      "story": "Festivals bring lights, songs, sharing, and smiles.",
+      "flashcards": [
+        {"front": "Country", "back": "A place where people live", "audioAsset": "audio/flashcards/flash_gk_1.wav"},
+        {"front": "Helper", "back": "A person who helps", "audioAsset": "audio/flashcards/flash_gk_2.wav"},
+        {"front": "Season", "back": "Weather changes", "audioAsset": "audio/flashcards/flash_gk_3.wav"}
+      ],
+      "questions": [
+        {"prompt": "Who helps us learn?", "options": ["Teacher", "Stone", "Cloud"], "answerIndex": 0, "hint": "Think of school."},
+        {"prompt": "Which is a season?", "options": ["Winter", "Pencil", "Bottle"], "answerIndex": 0, "hint": "It changes weather."},
+        {"prompt": "Which one is transport?", "options": ["Train", "Apple", "Chair"], "answerIndex": 0, "hint": "It moves people."}
+      ],
+      "practicePrompt": "Name 3 helpers in your area.",
+      "practiceHint": "Think school, home, and neighborhood.",
+      "audioAsset": "audio/lessons/lesson_gk_c5.wav",
+      "translations": {"en": {"title": "Festivals", "story": "Festivals bring lights, songs, sharing, and smiles."}}
+    },
+    {
+      "id": "class-1-subject-communication-activity-story",
+      "classId": "class-1",
+      "subjectId": "communication",
+      "title": "Listen First",
+      "activityType": "story",
+      "story": "We listen with care, then we speak with a smile.",
+      "flashcards": [
+        {"front": "Listen", "back": "Pay attention to sounds and words", "audioAsset": "audio/flashcards/flash_communication_1.wav"},
+        {"front": "Speak", "back": "Share your ideas", "audioAsset": "audio/flashcards/flash_communication_2.wav"},
+        {"front": "Kind words", "back": "Words that help people feel good", "audioAsset": "audio/flashcards/flash_communication_3.wav"}
+      ],
+      "questions": [
+        {"prompt": "What do we do first?", "options": ["Listen", "Shout", "Hide"], "answerIndex": 0, "hint": "Good talk starts with listening."},
+        {"prompt": "Which is kind?", "options": ["Please", "Noisy", "Push"], "answerIndex": 0, "hint": "Kind words sound gentle."},
+        {"prompt": "What helps teamwork?", "options": ["Share", "Snatch", "Ignore"], "answerIndex": 0, "hint": "Sharing helps the group."}
+      ],
+      "practicePrompt": "Practice saying: please, thank you, sorry.",
+      "practiceHint": "Use a soft voice and a smile.",
+      "audioAsset": "audio/lessons/lesson_communication_c1.wav",
+      "translations": {"en": {"title": "Listen First", "story": "We listen with care, then we speak with a smile."}}
+    },
+    {
+      "id": "class-2-subject-communication-activity-story",
+      "classId": "class-2",
+      "subjectId": "communication",
+      "title": "Speak Clearly",
+      "activityType": "story",
+      "story": "Clear words help other people understand our ideas.",
+      "flashcards": [
+        {"front": "Listen", "back": "Pay attention to sounds and words", "audioAsset": "audio/flashcards/flash_communication_1.wav"},
+        {"front": "Speak", "back": "Share your ideas", "audioAsset": "audio/flashcards/flash_communication_2.wav"},
+        {"front": "Kind words", "back": "Words that help people feel good", "audioAsset": "audio/flashcards/flash_communication_3.wav"}
+      ],
+      "questions": [
+        {"prompt": "What do we do first?", "options": ["Listen", "Shout", "Hide"], "answerIndex": 0, "hint": "Good talk starts with listening."},
+        {"prompt": "Which is kind?", "options": ["Please", "Noisy", "Push"], "answerIndex": 0, "hint": "Kind words sound gentle."},
+        {"prompt": "What helps teamwork?", "options": ["Share", "Snatch", "Ignore"], "answerIndex": 0, "hint": "Sharing helps the group."}
+      ],
+      "practicePrompt": "Practice saying: please, thank you, sorry.",
+      "practiceHint": "Use a soft voice and a smile.",
+      "audioAsset": "audio/lessons/lesson_communication_c2.wav",
+      "translations": {"en": {"title": "Speak Clearly", "story": "Clear words help other people understand our ideas."}}
+    },
+    {
+      "id": "class-3-subject-communication-activity-story",
+      "classId": "class-3",
+      "subjectId": "communication",
+      "title": "Ask Kindly",
+      "activityType": "story",
+      "story": "Kind questions begin with please and thank you.",
+      "flashcards": [
+        {"front": "Listen", "back": "Pay attention to sounds and words", "audioAsset": "audio/flashcards/flash_communication_1.wav"},
+        {"front": "Speak", "back": "Share your ideas", "audioAsset": "audio/flashcards/flash_communication_2.wav"},
+        {"front": "Kind words", "back": "Words that help people feel good", "audioAsset": "audio/flashcards/flash_communication_3.wav"}
+      ],
+      "questions": [
+        {"prompt": "What do we do first?", "options": ["Listen", "Shout", "Hide"], "answerIndex": 0, "hint": "Good talk starts with listening."},
+        {"prompt": "Which is kind?", "options": ["Please", "Noisy", "Push"], "answerIndex": 0, "hint": "Kind words sound gentle."},
+        {"prompt": "What helps teamwork?", "options": ["Share", "Snatch", "Ignore"], "answerIndex": 0, "hint": "Sharing helps the group."}
+      ],
+      "practicePrompt": "Practice saying: please, thank you, sorry.",
+      "practiceHint": "Use a soft voice and a smile.",
+      "audioAsset": "audio/lessons/lesson_communication_c3.wav",
+      "translations": {"en": {"title": "Ask Kindly", "story": "Kind questions begin with please and thank you."}}
+    },
+    {
+      "id": "class-4-subject-communication-activity-story",
+      "classId": "class-4",
+      "subjectId": "communication",
+      "title": "Share Feelings",
+      "activityType": "story",
+      "story": "We can tell how we feel using simple, gentle words.",
+      "flashcards": [
+        {"front": "Listen", "back": "Pay attention to sounds and words", "audioAsset": "audio/flashcards/flash_communication_1.wav"},
+        {"front": "Speak", "back": "Share your ideas", "audioAsset": "audio/flashcards/flash_communication_2.wav"},
+        {"front": "Kind words", "back": "Words that help people feel good", "audioAsset": "audio/flashcards/flash_communication_3.wav"}
+      ],
+      "questions": [
+        {"prompt": "What do we do first?", "options": ["Listen", "Shout", "Hide"], "answerIndex": 0, "hint": "Good talk starts with listening."},
+        {"prompt": "Which is kind?", "options": ["Please", "Noisy", "Push"], "answerIndex": 0, "hint": "Kind words sound gentle."},
+        {"prompt": "What helps teamwork?", "options": ["Share", "Snatch", "Ignore"], "answerIndex": 0, "hint": "Sharing helps the group."}
+      ],
+      "practicePrompt": "Practice saying: please, thank you, sorry.",
+      "practiceHint": "Use a soft voice and a smile.",
+      "audioAsset": "audio/lessons/lesson_communication_c4.wav",
+      "translations": {"en": {"title": "Share Feelings", "story": "We can tell how we feel using simple, gentle words."}}
+    },
+    {
+      "id": "class-5-subject-communication-activity-story",
+      "classId": "class-5",
+      "subjectId": "communication",
+      "title": "Team Talk",
+      "activityType": "story",
+      "story": "Good teamwork means sharing, waiting, and helping each other.",
+      "flashcards": [
+        {"front": "Listen", "back": "Pay attention to sounds and words", "audioAsset": "audio/flashcards/flash_communication_1.wav"},
+        {"front": "Speak", "back": "Share your ideas", "audioAsset": "audio/flashcards/flash_communication_2.wav"},
+        {"front": "Kind words", "back": "Words that help people feel good", "audioAsset": "audio/flashcards/flash_communication_3.wav"}
+      ],
+      "questions": [
+        {"prompt": "What do we do first?", "options": ["Listen", "Shout", "Hide"], "answerIndex": 0, "hint": "Good talk starts with listening."},
+        {"prompt": "Which is kind?", "options": ["Please", "Noisy", "Push"], "answerIndex": 0, "hint": "Kind words sound gentle."},
+        {"prompt": "What helps teamwork?", "options": ["Share", "Snatch", "Ignore"], "answerIndex": 0, "hint": "Sharing helps the group."}
+      ],
+      "practicePrompt": "Practice saying: please, thank you, sorry.",
+      "practiceHint": "Use a soft voice and a smile.",
+      "audioAsset": "audio/lessons/lesson_communication_c5.wav",
+      "translations": {"en": {"title": "Team Talk", "story": "Good teamwork means sharing, waiting, and helping each other."}}
+    },
+    {
+      "id": "class-0-subject-little-activity-capitals",
+      "classId": "class-0",
+      "subjectId": "little",
+      "title": "Big ABC",
+      "activityType": "letter",
+      "story": "Meet every capital letter with its small letter, word, picture, Hindi, and Marathi.",
+      "flashcards": [
+        {"front": "A a", "back": "Apple 🍎 | सेब | सफरचंद"},
+        {"front": "B b", "back": "Ball ⚽ | गेंद | चेंडू"},
+        {"front": "C c", "back": "Cat 🐱 | बिल्ली | मांजर"},
+        {"front": "D d", "back": "Dog 🐶 | कुत्ता | कुत्रा"},
+        {"front": "E e", "back": "Elephant 🐘 | हाथी | हत्ती"},
+        {"front": "F f", "back": "Fish 🐟 | मछली | मासा"},
+        {"front": "G g", "back": "Grapes 🍇 | अंगूर | द्राक्ष"},
+        {"front": "H h", "back": "Hat 🎩 | टोपी | टोपी"},
+        {"front": "I i", "back": "Ice cream 🍦 | आइसक्रीम | आईस्क्रीम"},
+        {"front": "J j", "back": "Juice 🧃 | जूस | रस"},
+        {"front": "K k", "back": "Kite 🪁 | पतंग | पतंग"},
+        {"front": "L l", "back": "Lion 🦁 | शेर | सिंह"},
+        {"front": "M m", "back": "Mango 🥭 | आम | आंबा"},
+        {"front": "N n", "back": "Nose 👃 | नाक | नाक"},
+        {"front": "O o", "back": "Owl 🦉 | उल्लू | घुबड"},
+        {"front": "P p", "back": "Panda 🐼 | पांडा | पांडा"},
+        {"front": "Q q", "back": "Queen 👸 | रानी | राणी"},
+        {"front": "R r", "back": "Rabbit 🐰 | खरगोश | ससा"},
+        {"front": "S s", "back": "Sun ☀️ | सूरज | सूर्य"},
+        {"front": "T t", "back": "Tree 🌳 | पेड़ | झाड"},
+        {"front": "U u", "back": "Umbrella ☔ | छाता | छत्री"},
+        {"front": "V v", "back": "Van 🚐 | वैन | व्हॅन"},
+        {"front": "W w", "back": "Watermelon 🍉 | तरबूज | कलिंगड"},
+        {"front": "X x", "back": "Xylophone 🎵 | संगीत वाद्य | वाद्य"},
+        {"front": "Y y", "back": "Yacht ⛵ | नाव | बोट"},
+        {"front": "Z z", "back": "Zebra 🦓 | ज़ेबरा | झेब्रा"}
+      ],
+      "questions": [],
+      "practicePrompt": "Point to each capital letter and say its name.",
+      "practiceHint": "Make each letter slowly and clearly.",
+      "audioAsset": "",
+      "translations": {
+        "hi": {"title": "बड़े अक्षर", "story": "हर बड़े अक्षर को उसके छोटे रूप, शब्द और भावचित्र के साथ सीखें।"},
+        "mr": {"title": "मोठी अक्षरे", "story": "प्रत्येक मोठा अक्षर त्याच्या छोट्या रूप, शब्द आणि चित्रासह शिका."}
+      }
+    },
+    {
+      "id": "class-0-subject-little-activity-smalls",
+      "classId": "class-0",
+      "subjectId": "little",
+      "title": "Small abc",
+      "activityType": "letter",
+      "story": "Practice every small letter beside its capital letter, word, picture, Hindi, and Marathi.",
+      "flashcards": [
+        {"front": "a A", "back": "Apple 🍎 | सेब | सफरचंद"},
+        {"front": "b B", "back": "Ball ⚽ | गेंद | चेंडू"},
+        {"front": "c C", "back": "Cat 🐱 | बिल्ली | मांजर"},
+        {"front": "d D", "back": "Dog 🐶 | कुत्ता | कुत्रा"},
+        {"front": "e E", "back": "Elephant 🐘 | हाथी | हत्ती"},
+        {"front": "f F", "back": "Fish 🐟 | मछली | मासा"},
+        {"front": "g G", "back": "Grapes 🍇 | अंगूर | द्राक्ष"},
+        {"front": "h H", "back": "Hat 🎩 | टोपी | टोपी"},
+        {"front": "i I", "back": "Ice cream 🍦 | आइसक्रीम | आईस्क्रीम"},
+        {"front": "j J", "back": "Juice 🧃 | जूस | रस"},
+        {"front": "k K", "back": "Kite 🪁 | पतंग | पतंग"},
+        {"front": "l L", "back": "Lion 🦁 | शेर | सिंह"},
+        {"front": "m M", "back": "Mango 🥭 | आम | आंबा"},
+        {"front": "n N", "back": "Nose 👃 | नाक | नाक"},
+        {"front": "o O", "back": "Owl 🦉 | उल्लू | घुबड"},
+        {"front": "p P", "back": "Panda 🐼 | पांडा | पांडा"},
+        {"front": "q Q", "back": "Queen 👸 | रानी | राणी"},
+        {"front": "r R", "back": "Rabbit 🐰 | खरगोश | ससा"},
+        {"front": "s S", "back": "Sun ☀️ | सूरज | सूर्य"},
+        {"front": "t T", "back": "Tree 🌳 | पेड़ | झाड"},
+        {"front": "u U", "back": "Umbrella ☔ | छाता | छत्री"},
+        {"front": "v V", "back": "Van 🚐 | वैन | व्हॅन"},
+        {"front": "w W", "back": "Watermelon 🍉 | तरबूज | कलिंगड"},
+        {"front": "x X", "back": "Xylophone 🎵 | संगीत वाद्य | वाद्य"},
+        {"front": "y Y", "back": "Yacht ⛵ | नाव | बोट"},
+        {"front": "z Z", "back": "Zebra 🦓 | ज़ेबरा | झेब्रा"}
+      ],
+      "questions": [],
+      "practicePrompt": "Trace each small letter and say its sound.",
+      "practiceHint": "Keep your writing small and steady.",
+      "audioAsset": "",
+      "translations": {
+        "hi": {"title": "छोटे अक्षर", "story": "हर छोटे अक्षर को उसके बड़े रूप, शब्द और भावचित्र के साथ सीखें।"},
+        "mr": {"title": "लहान अक्षरे", "story": "प्रत्येक लहान अक्षर त्याच्या मोठ्या रूप, शब्द आणि चित्रासह शिका."}
+      }
+    },
+    {
+      "id": "class-0-subject-little-activity-numbers",
+      "classId": "class-0",
+      "subjectId": "little",
+      "title": "Numbers 1 to 10",
+      "activityType": "number",
+      "story": "Count slowly from one to ten and hear every number in English, Hindi, and Marathi.",
+      "flashcards": [
+        {"front": "1", "back": "One | एक | एक"},
+        {"front": "2", "back": "Two | दो | दोन"},
+        {"front": "3", "back": "Three | तीन | तीन"},
+        {"front": "4", "back": "Four | चार | चार"},
+        {"front": "5", "back": "Five | पाँच | पाच"},
+        {"front": "6", "back": "Six | छह | सहा"},
+        {"front": "7", "back": "Seven | सात | सात"},
+        {"front": "8", "back": "Eight | आठ | आठ"},
+        {"front": "9", "back": "Nine | नौ | नऊ"},
+        {"front": "10", "back": "Ten | दस | दहा"}
+      ],
+      "questions": [],
+      "practicePrompt": "Count ten stars one at a time.",
+      "practiceHint": "Touch each star as you count.",
+      "audioAsset": "",
+      "translations": {
+        "hi": {"title": "संख्याएँ 1 से 10", "story": "एक से दस तक धीरे-धीरे गिनें और हर संख्या उच्चारित करें।"},
+        "mr": {"title": "संख्या 1 ते 10", "story": "एक ते दहापर्यंत हळू गिना आणि प्रत्येक संख्या बोला."}
+      }
+    },
+    {
+      "id": "class-0-subject-little-activity-find-letter",
+      "classId": "class-0",
+      "subjectId": "little",
+      "title": "Find the Letter",
+      "activityType": "game",
+      "story": "Find the requested capital and small letter among friendly letter choices.",
+      "flashcards": [
+        {"front": "A a", "back": "Apple 🍎 | सेब | सफरचंद"},
+        {"front": "B b", "back": "Ball ⚽ | गेंद | चेंडू"},
+        {"front": "C c", "back": "Cat 🐱 | बिल्ली | मांजर"},
+        {"front": "D d", "back": "Dog 🐶 | कुत्ता | कुत्रा"},
+        {"front": "E e", "back": "Elephant 🐘 | हाथी | हत्ती"},
+        {"front": "F f", "back": "Fish 🐟 | मछली | मासा"},
+        {"front": "G g", "back": "Grapes 🍇 | अंगूर | द्राक्ष"},
+        {"front": "H h", "back": "Hat 🎩 | टोपी | टोपी"},
+        {"front": "I i", "back": "Ice cream 🍦 | आइसक्रीम | आईस्क्रीम"},
+        {"front": "J j", "back": "Juice 🧃 | जूस | रस"},
+        {"front": "K k", "back": "Kite 🪁 | पतंग | पतंग"},
+        {"front": "L l", "back": "Lion 🦁 | शेर | सिंह"},
+        {"front": "M m", "back": "Mango 🥭 | आम | आंबा"},
+        {"front": "N n", "back": "Nose 👃 | नाक | नाक"},
+        {"front": "O o", "back": "Owl 🦉 | उल्लू | घुबड"},
+        {"front": "P p", "back": "Panda 🐼 | पांडा | पांडा"},
+        {"front": "Q q", "back": "Queen 👸 | रानी | राणी"},
+        {"front": "R r", "back": "Rabbit 🐰 | खरगोश | ससा"},
+        {"front": "S s", "back": "Sun ☀️ | सूरज | सूर्य"},
+        {"front": "T t", "back": "Tree 🌳 | पेड़ | झाड"},
+        {"front": "U u", "back": "Umbrella ☔ | छाता | छत्री"},
+        {"front": "V v", "back": "Van 🚐 | वैन | व्हॅन"},
+        {"front": "W w", "back": "Watermelon 🍉 | तरबूज | कलिंगड"},
+        {"front": "X x", "back": "Xylophone 🎵 | संगीत वाद्य | वाद्य"},
+        {"front": "Y y", "back": "Yacht ⛵ | नाव | बोट"},
+        {"front": "Z z", "back": "Zebra 🦓 | ज़ेबरा | झेब्रा"}
+      ],
+      "questions": [],
+      "practicePrompt": "Choose the letter that the teacher asks for.",
+      "practiceHint": "Look at both the big and small letter before choosing.",
+      "audioAsset": "",
+      "translations": {
+        "hi": {"title": "अक्षर खोजो", "story": "मित्र अक्षरों में माँगा गया बड़ा और छोटा अक्षर खोजें।"},
+        "mr": {"title": "अक्षर शोधा", "story": "मित्र अक्षरांतून विचारलेला मोठा आणि लहान अक्षर शोधा."}
+      }
+    },
+    {
+      "id": "class-0-subject-little-activity-match-case",
+      "classId": "class-0",
+      "subjectId": "little",
+      "title": "Match Letters",
+      "activityType": "game",
+      "story": "Match every capital letter with its small letter friend.",
+      "flashcards": [
+        {"front": "A", "back": "a | Apple 🍎 | सेब | सफरचंद"},
+        {"front": "B", "back": "b | Ball ⚽ | गेंद | चेंडू"},
+        {"front": "C", "back": "c | Cat 🐱 | बिल्ली | मांजर"},
+        {"front": "D", "back": "d | Dog 🐶 | कुत्ता | कुत्रा"},
+        {"front": "E", "back": "e | Elephant 🐘 | हाथी | हत्ती"},
+        {"front": "F", "back": "f | Fish 🐟 | मछली | मासा"},
+        {"front": "G", "back": "g | Grapes 🍇 | अंगूर | द्राक्ष"},
+        {"front": "H", "back": "h | Hat 🎩 | टोपी | टोपी"},
+        {"front": "I", "back": "i | Ice cream 🍦 | आइसक्रीम | आईस्क्रीम"},
+        {"front": "J", "back": "j | Juice 🧃 | जूस | रस"},
+        {"front": "K", "back": "k | Kite 🪁 | पतंग | पतंग"},
+        {"front": "L", "back": "l | Lion 🦁 | शेर | सिंह"},
+        {"front": "M", "back": "m | Mango 🥭 | आम | आंबा"},
+        {"front": "N", "back": "n | Nose 👃 | नाक | नाक"},
+        {"front": "O", "back": "o | Owl 🦉 | उल्लू | घुबड"},
+        {"front": "P", "back": "p | Panda 🐼 | पांडा | पांडा"},
+        {"front": "Q", "back": "q | Queen 👸 | रानी | राणी"},
+        {"front": "R", "back": "r | Rabbit 🐰 | खरगोश | ससा"},
+        {"front": "S", "back": "s | Sun ☀️ | सूरज | सूर्य"},
+        {"front": "T", "back": "t | Tree 🌳 | पेड़ | झाड"},
+        {"front": "U", "back": "u | Umbrella ☔ | छाता | छत्री"},
+        {"front": "V", "back": "v | Van 🚐 | वैन | व्हॅन"},
+        {"front": "W", "back": "w | Watermelon 🍉 | तरबूज | कलिंगड"},
+        {"front": "X", "back": "x | Xylophone 🎵 | संगीत वाद्य | वाद्य"},
+        {"front": "Y", "back": "y | Yacht ⛵ | नाव | बोट"},
+        {"front": "Z", "back": "z | Zebra 🦓 | ज़ेबरा | झेब्रा"}
+      ],
+      "questions": [],
+      "practicePrompt": "Draw a line from each capital letter to its small letter.",
+      "practiceHint": "Say both letter names as you match them.",
+      "audioAsset": "",
+      "translations": {
+        "hi": {"title": "अक्षर मिलाओ", "story": "हर बड़े अक्षर को उसके छोटे अक्षर मित्र से मिलाएँ।"},
+        "mr": {"title": "अक्षर जुळवा", "story": "प्रत्येक मोठ्या अक्षराला त्याच्या लहान अक्षर मित्राशी जुळवा."}
+      }
+    },
+    {
+      "id": "class-0-subject-little-activity-first-words",
+      "classId": "class-0",
+      "subjectId": "little",
+      "title": "First Words",
+      "activityType": "word",
+      "story": "Read, hear, and match familiar animals, things, and colors in three languages.",
+      "flashcards": [
+        {"front": "CAT", "back": "CAT 🐱 | बिल्ली | मांजर"},
+        {"front": "DOG", "back": "DOG 🐶 | कुत्ता | कुत्रा"},
+        {"front": "SUN", "back": "SUN ☀️ | सूरज | सूर्य"},
+        {"front": "HAT", "back": "HAT 🎩 | टोपी | टोपी"},
+        {"front": "BAG", "back": "BAG 🎒 | बैग | पिशवी"},
+        {"front": "CUP", "back": "CUP ☕ | कप | कप"},
+        {"front": "PEN", "back": "PEN 🖊️ | कलम | पेन"},
+        {"front": "PIG", "back": "PIG 🐷 | सुअर | डुक्कर"},
+        {"front": "BUS", "back": "BUS 🚌 | बस | बस"},
+        {"front": "RED", "back": "RED 🔴 | लाल | लाल"}
+      ],
+      "questions": [],
+      "practicePrompt": "Point to each word and read it slowly.",
+      "practiceHint": "Use the picture if you need a little help.",
+      "audioAsset": "",
+      "translations": {
+        "hi": {"title": "पहले शब्द", "story": "परिचित जानवरों, वस्तुओं और रंगों को तीन भाषाओं में पढ़ें और सुनें।"},
+        "mr": {"title": "पहिले शब्द", "story": "ओळखील प्राणी, गोष्टी आणि रंग तीन भाषांत वाचा आणि ऐका."}
+      }
+    }
+  ]
+}
