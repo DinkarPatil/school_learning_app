@@ -42,6 +42,31 @@ learning step works offline.
 - `shared_preferences` for local progress
 - `audioplayers` for packaged lesson and flashcard audio
 - `flutter_tts` for spoken prompts and the speech fallback
+- FastAPI, SQLAlchemy 2 (async), and Pydantic for the account service in `backend/`
+
+## Backend
+
+Phase 2 adds a FastAPI service in `backend/` for parent accounts, child
+profiles, and progress sync. Milestone 1 (auth core) is implemented: signup,
+login, refresh with rotation and reuse detection, logout, and a signed-in parent
+lookup. Profiles, sync, email verification, password reset, and the PIN are the
+remaining milestones.
+
+The service is not required to run the app. Learning, games, and local progress
+work entirely offline; only accounts and sync need the network.
+
+```text
+cd backend
+uv venv
+uv pip install -e ".[dev]"
+copy .env.example .env
+uv run uvicorn app.main:app --reload
+```
+
+Configuration comes from the environment. `.env.example` documents variable names
+only and holds no credentials. `JWT_SIGNING_SECRET` is required outside local and
+test environments. Tests use an isolated in-memory SQLite database; production
+uses PostgreSQL through `DATABASE_URL`.
 
 ## Local checks
 
@@ -50,4 +75,10 @@ dart format --set-exit-if-changed lib test
 flutter analyze
 flutter test
 flutter build apk --debug
+
+cd backend
+uv run ruff format --check .
+uv run ruff check .
+uv run mypy app tests
+uv run pytest
 ```

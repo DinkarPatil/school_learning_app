@@ -48,3 +48,14 @@ app.*.map.json
 /graphify-out/
 /lib/graphify-out/
 /.graphify_*
+
+# Python backend
+/backend/.venv/
+/backend/.env
+/backend/*.db
+/backend/*.sqlite3
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/

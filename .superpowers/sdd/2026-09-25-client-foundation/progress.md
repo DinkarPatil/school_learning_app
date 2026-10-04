@@ -76,6 +76,22 @@ Rulings:
 
 Task hardening wave: complete (verification green: `dart format --set-exit-if-changed lib test` 0 changed, `flutter analyze` clean, 167 tests pass, `flutter build apk --debug` produced a 210,698,297-byte APK on the hardened tree; committed and pushed)
 
+## Phase 2 milestone 1 — backend foundation and auth core
+
+Plan: `docs/superpowers/plans/2026-10-04-phase-2-accounts-and-profiles.md`
+
+- The spec mandates a FastAPI service for this phase; Phase 1 deliberately shipped none. Python 3.13 and uv 0.9.18 were available, so the service was built rather than deferred.
+- Backend lives at `backend/` with the package layout from spec §6. Provider-neutral async SQLAlchemy: SQLite for tests through a static pool, PostgreSQL via `DATABASE_URL`, and a `UtcDateTime` type decorator so timezone handling does not depend on the backend dialect.
+- Argon2id for passwords and PINs, short-lived HS256 access tokens, and refresh tokens that rotate within a stable family. Presenting an already-rotated token revokes the whole family, which is the standard reuse-detection response.
+- Passwords are never returned by any endpoint, and an unknown account still performs a real Argon2 verification so response time does not disclose whether an email is registered.
+- Real defect found and fixed during the build: refresh-token rows were keyed by a fresh random id rather than the token `jti`, so every rotation and logout lookup missed and silently returned `invalid_token`.
+- Real defect found and fixed during the build: the parent-safe message lookup matched error codes against enum values instead of member names, so every error degraded to a generic message.
+- Tooling note: this FastAPI version's `solve_dependencies` does not short-circuit on a `Response` returned from a dependency, so the first rate-limit design silently did nothing. Rate limiting is now an explicit `enforce_rate_limit` call that raises and is handled centrally.
+- Secrets remain environment-only. `.env.example` documents names with empty values. `.gitignore` excludes `backend/.venv`, `backend/.env`, and local SQLite files.
+- The Flutter client is untouched and its 167 tests still pass. `ProgressStore(profileId:)` already namespaces progress per profile, so Phase 2 needs no local data migration.
+
+Task phase-2-milestone-1: complete (verification green: `ruff format --check` clean, `ruff check` clean, `mypy --strict app tests` clean, 22 backend tests pass; Flutter format/analyze/167 tests unchanged)
+
 Task 1: fix round 1/5 (2 addressed, 0 open; filesystem-only fallback)
 Task 1: complete (review clean; no Git commit because workspace has no repository)
 Task 2: fix round 1/5 (3 addressed, 0 open; filesystem-only fallback)
