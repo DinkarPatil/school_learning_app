@@ -646,11 +646,24 @@ class _ActivityScreenState extends State<ActivityScreen> {
     List<ActivityStep> steps,
     int index,
   ) async {
-    await _settle(() => _persistQuizScore(controller, activity));
+    await _settle(
+      () => _persistQuizScore(controller, activity),
+      onTimeout: _reportSaveTimeout,
+    );
     if (!mounted) {
       return;
     }
     _goToStep(steps, index - 1);
+  }
+
+  void _reportSaveTimeout() {
+    if (!mounted) {
+      return;
+    }
+    setState(() => _quizError = kSaveTimeoutMessage);
+    ScaffoldMessenger.maybeOf(context)?.showSnackBar(
+      const SnackBar(content: Text(kSaveTimeoutMessage)),
+    );
   }
 
   Future<void> _recordPractice(
@@ -747,9 +760,14 @@ class _ActivityScreenState extends State<ActivityScreen> {
     }
   }
 
-  Future<void> _settle(Future<bool> Function() work) async {
+  Future<void> _settle(
+    Future<bool> Function() work, {
+    VoidCallback? onTimeout,
+  }) async {
     try {
       await work().timeout(kSaveTimeout);
+    } on TimeoutException {
+      onTimeout?.call();
     } on Object {
       return;
     }
@@ -770,7 +788,10 @@ class _ActivityScreenState extends State<ActivityScreen> {
   }) async {
     final activity = _resolveActivity(controller);
     if (activity != null) {
-      await _settle(() => _persistQuizScore(controller, activity));
+      await _settle(
+        () => _persistQuizScore(controller, activity),
+        onTimeout: _reportSaveTimeout,
+      );
     }
     if (!context.mounted) {
       return;
@@ -1042,6 +1063,7 @@ class _DrawingPadState extends State<DrawingPad> {
 
   @override
   Widget build(BuildContext context) {
+    final strokeCount = _strokes.length;
     return Column(
       crossAxisAlignment: CrossAxisAlignment.start,
       children: <Widget>[
@@ -1053,6 +1075,9 @@ class _DrawingPadState extends State<DrawingPad> {
               container: true,
               label: 'Drawing area',
               hint: 'Draw with a finger or a pointer',
+              value: strokeCount == 0
+                  ? 'Nothing drawn yet'
+                  : '$strokeCount ${strokeCount == 1 ? 'line' : 'lines'} drawn',
               child: Container(
                 height: height,
                 width: double.infinity,
@@ -1084,18 +1109,47 @@ class _DrawingPadState extends State<DrawingPad> {
         const SizedBox(height: 10),
         Semantics(
           button: true,
-          label: 'Clear drawing',
-          hint: 'Erase everything you drew',
-          onTap: () => setState(_strokes.clear),
+          enabled: _strokes.isNotEmpty,
+          label: 'Undo last line',
+          hint: 'Take back the line you drew last',
+          onTap: _strokes.isEmpty ? null : _undoLastStroke,
           child: ExcludeSemantics(
             child: OutlinedButton(
-              onPressed: () => setState(_strokes.clear),
+              onPressed: _strokes.isEmpty ? null : _undoLastStroke,
+              child: const Text('Undo last line'),
+            ),
+          ),
+        ),
+        const SizedBox(height: 10),
+        Semantics(
+          button: true,
+          enabled: _strokes.isNotEmpty,
+          label: 'Clear drawing',
+          hint: 'Erase everything you drew',
+          onTap: _strokes.isEmpty ? null : _clearDrawing,
+          child: ExcludeSemantics(
+            child: OutlinedButton(
+              onPressed: _strokes.isEmpty ? null : _clearDrawing,
               child: const Text('Clear drawing'),
             ),
           ),
         ),
       ],
     );
+  }
+
+  void _undoLastStroke() {
+    if (_strokes.isEmpty) {
+      return;
+    }
+    setState(() => _strokes.removeLast());
+  }
+
+  void _clearDrawing() {
+    if (_strokes.isEmpty) {
+      return;
+    }
+    setState(_strokes.clear);
   }
 }
 

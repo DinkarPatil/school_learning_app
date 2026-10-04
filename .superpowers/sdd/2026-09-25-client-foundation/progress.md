@@ -58,6 +58,24 @@ Rulings:
 
 Task final-fix wave: complete (verification green: `dart format --set-exit-if-changed lib test` 0 changed, `flutter analyze` clean, 159 tests pass, `flutter build apk --debug` produced a fresh 210,695,795-byte APK on the final tree; filesystem-only fallback, no Git commit because workspace has no repository)
 
+## Repository and hardening wave
+
+Report: `.superpowers/sdd/2026-09-25-client-foundation/hardening-report.md`
+
+Rulings:
+
+- Git initialised in `School/` and `smart_kid_learns/`, both pushed to public repositories `DinkarPatil/school_learning_app` and `DinkarPatil/smart_kid_learns`. `smart_kid_learns/.env` holds a real `OPENAI_API_KEY`; it is gitignored and a pre-push scan of both staged trees and both public trees found no key material.
+- Real defect: `AppTheme.toolbarHeight` clamped the text scale at 2.0, so past 2x the app bar stopped growing while its title kept scaling and was clipped. Measured 144dp bar against a 192dp title at 2x and a 384dp title at 3x. The clamp is removed; the toolbar now scales with the real text scale.
+- Real defect: every home card measured 1400dp wide on a 1440dp surface. Added `ContentWidthLimiter` (640dp, centred) applied above `kWideSurfaceThreshold = 900`. The threshold matters: capping unconditionally changed text wrapping on the 800dp test surface and broke nine tests. Phones and small tablets are unchanged.
+- Real defect: the reward action bar measured 305dp against a 191dp body at 2x. Task 6 left it alone because a second `Scrollable` broke a test helper that required exactly one match; that helper was over-constrained and now targets the first scrollable. The bar is capped at 40% of the screen and scrolls internally when it overflows.
+- Real defect: `_settle` swallowed `TimeoutException`, so a stalled quiz or game save told the child nothing. Both screens now report a shared child-safe `kSaveTimeoutMessage` via an app-level SnackBar, plus inline state where the screen survives.
+- Real defect: `HomeScreen` accepted `onContinue`, `onOpenSubjects`, `onOpenGames`, and `onTeacher`; no caller in `lib/` or `test/` ever passed them. Removed.
+- Partial defect: the drawing pad exposed no state and only an always-enabled clear. It now reports a semantic `value` (nothing drawn / N lines drawn), offers "Undo last line", and disables both actions until a stroke exists. Pointer drawing itself is unchanged because the practice step is completable without it.
+- Dismissed with evidence: the Ahem-font ceiling is a test-harness limit. The Ahem glyph is about 1.1 em wide, so no layout on a 320-360dp surface can fit the fit oracle at 2x. Fixing it literally needs a real font in test assets, which is outside Phase 1. Documented rather than worked around.
+- One pre-existing test asserted the always-enabled clear action; updated to the corrected disabled state.
+
+Task hardening wave: complete (verification green: `dart format --set-exit-if-changed lib test` 0 changed, `flutter analyze` clean, 167 tests pass, `flutter build apk --debug` produced a 210,698,297-byte APK on the hardened tree; committed and pushed)
+
 Task 1: fix round 1/5 (2 addressed, 0 open; filesystem-only fallback)
 Task 1: complete (review clean; no Git commit because workspace has no repository)
 Task 2: fix round 1/5 (3 addressed, 0 open; filesystem-only fallback)

@@ -1,4 +1,5 @@
 import 'dart:async';
+import 'dart:math' as math;
 
 import 'package:flutter/material.dart';
 import 'package:school_learning_app/app/app_controller.dart';
@@ -7,6 +8,9 @@ import 'package:school_learning_app/features/learning/lesson_audio.dart';
 
 const double kPrimaryActionHeight = 64;
 const double kPrimaryActionWidth = 64;
+
+const String kSaveTimeoutMessage =
+    'Saving is taking too long. Your stars may not be saved yet.';
 
 const String kContentFailedTitle = 'We cannot open the learning shelf yet';
 const String kContentFailedBody =
@@ -155,6 +159,8 @@ class PrimaryActions extends StatelessWidget {
 
 const double kStackedCardWidth = 320;
 const double kStackedCardTextScale = 1.15;
+const double kMaxContentWidth = 640;
+const double kWideSurfaceThreshold = 900;
 
 bool useStackedCardLayout(
   BuildContext context,
@@ -165,6 +171,34 @@ bool useStackedCardLayout(
   }
   return MediaQuery.textScalerOf(context).scale(16) / 16 >
       kStackedCardTextScale;
+}
+
+/// Keeps reading content readable on wide screens instead of letting cards and
+/// text stretch the full width of a desktop or tablet display. Phones and small
+/// tablets are left untouched so the layout matches the device-sized designs.
+class ContentWidthLimiter extends StatelessWidget {
+  const ContentWidthLimiter({super.key, required this.child});
+
+  final Widget child;
+
+  @override
+  Widget build(BuildContext context) {
+    return LayoutBuilder(
+      builder: (context, constraints) {
+        if (!constraints.maxWidth.isFinite ||
+            constraints.maxWidth <= kWideSurfaceThreshold) {
+          return child;
+        }
+        return Align(
+          alignment: Alignment.topCenter,
+          child: ConstrainedBox(
+            constraints: const BoxConstraints(maxWidth: kMaxContentWidth),
+            child: child,
+          ),
+        );
+      },
+    );
+  }
 }
 
 class CardBadge extends StatelessWidget {
@@ -195,19 +229,29 @@ class LearningActionBar extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Container(
-      width: double.infinity,
-      decoration: const BoxDecoration(
-        color: Colors.white,
-        border: Border(top: BorderSide(color: Color(0xFFD7E0DE))),
-      ),
-      padding: const EdgeInsets.fromLTRB(16, 12, 16, 12),
-      child: Wrap(
-        spacing: 12,
-        runSpacing: 12,
-        children: actions,
+    return ConstrainedBox(
+      constraints: BoxConstraints(maxHeight: _maxHeight(context)),
+      child: Container(
+        width: double.infinity,
+        decoration: const BoxDecoration(
+          color: Colors.white,
+          border: Border(top: BorderSide(color: Color(0xFFD7E0DE))),
+        ),
+        padding: const EdgeInsets.fromLTRB(16, 12, 16, 12),
+        child: SingleChildScrollView(
+          child: Wrap(
+            spacing: 12,
+            runSpacing: 12,
+            children: actions,
+          ),
+        ),
       ),
     );
+  }
+
+  double _maxHeight(BuildContext context) {
+    final screenHeight = MediaQuery.sizeOf(context).height;
+    return math.max(kPrimaryActionHeight + 24, screenHeight * 0.4);
   }
 }
 
@@ -240,13 +284,15 @@ class _LearningStepBodyState extends State<LearningStepBody> {
       crossAxisAlignment: CrossAxisAlignment.stretch,
       children: <Widget>[
         Expanded(
-          child: ListView(
-            controller: _scrollController,
-            padding: const EdgeInsets.fromLTRB(20, 12, 20, 20),
-            children: widget.children,
+          child: ContentWidthLimiter(
+            child: ListView(
+              controller: _scrollController,
+              padding: const EdgeInsets.fromLTRB(20, 12, 20, 20),
+              children: widget.children,
+            ),
           ),
         ),
-        LearningActionBar(actions: widget.actions),
+        ContentWidthLimiter(child: LearningActionBar(actions: widget.actions)),
       ],
     );
   }

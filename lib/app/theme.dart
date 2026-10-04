@@ -16,12 +16,11 @@ abstract final class AppColors {
 abstract final class AppTheme {
   static const double baseToolbarHeight = 72;
   static const double baseLeadingWidth = 72;
-  static const double maxTextScale = 2.0;
 
   static double toolbarHeight(BuildContext context) {
     return math.max(
       baseToolbarHeight,
-      baseToolbarHeight * math.min(_textScale(context), maxTextScale),
+      baseToolbarHeight * _textScale(context),
     );
   }
 

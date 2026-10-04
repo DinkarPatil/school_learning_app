@@ -16,6 +16,7 @@ import 'package:school_learning_app/data/content/content_repository.dart';
 import 'package:school_learning_app/data/progress/progress_store.dart';
 import 'package:school_learning_app/features/games/game_screen.dart';
 import 'package:school_learning_app/features/learning/activity_screen.dart';
+import 'package:school_learning_app/features/learning/learning_shell.dart';
 import 'package:school_learning_app/features/learning/subject_screen.dart';
 
 import '../support/activity_catalog.dart';
@@ -611,6 +612,76 @@ void main() {
         2,
       );
       expect(find.text('Continue learning'), findsOneWidget);
+    });
+
+    testWidgets('a stalled quiz save tells the child it did not finish',
+        (tester) async {
+      final progress = TestRecordingProgressStore();
+      final dependencies = _testDependencies(progressStore: progress);
+      await _pumpApp(tester, dependencies);
+      await _openStoryActivity(tester);
+      await _advanceToQuiz(tester);
+      await _answerBothQuestions(tester);
+
+      final gate = Completer<void>();
+      progress.gate = gate;
+      await tester.tap(find.text('Previous step'));
+      await tester.pump();
+      await tester.pump(kSaveTimeout + const Duration(seconds: 1));
+      await tester.pumpAndSettle();
+
+      expect(find.text(kSaveTimeoutMessage), findsWidgets);
+
+      gate.complete();
+      await tester.pumpAndSettle();
+    });
+
+    testWidgets('a stalled quiz save warns before leaving the activity',
+        (tester) async {
+      final progress = TestRecordingProgressStore();
+      final dependencies = _testDependencies(progressStore: progress);
+      await _pumpApp(tester, dependencies);
+      await _openStoryActivity(tester);
+      await _advanceToQuiz(tester);
+      await _answerBothQuestions(tester);
+
+      final gate = Completer<void>();
+      progress.gate = gate;
+      await tester.tap(find.widgetWithText(TextButton, 'Home'));
+      await tester.pump();
+      await tester.pump(kSaveTimeout + const Duration(seconds: 1));
+      await tester.pumpAndSettle();
+
+      expect(find.text('Continue learning'), findsOneWidget);
+      expect(find.text(kSaveTimeoutMessage), findsOneWidget);
+
+      gate.complete();
+      await tester.pumpAndSettle();
+    });
+
+    testWidgets('a stalled game score save warns before leaving',
+        (tester) async {
+      final progress = TestRecordingProgressStore();
+      final dependencies = _testDependencies(progressStore: progress);
+      await _pumpApp(tester, dependencies);
+      await _openGame(tester, 'Find the Letter');
+
+      final target = _targetText(tester);
+      await _tapKey(tester, Key('game-option-$target'));
+      await _tapText(tester, 'Next round');
+
+      final gate = Completer<void>();
+      progress.gate = gate;
+      await _tapText(tester, 'Go home');
+      await tester.pump();
+      await tester.pump(kGameSaveTimeout + const Duration(seconds: 1));
+      await tester.pumpAndSettle();
+
+      expect(find.text('Continue learning'), findsOneWidget);
+      expect(find.text(kSaveTimeoutMessage), findsWidgets);
+
+      gate.complete();
+      await tester.pumpAndSettle();
     });
 
     testWidgets('an already completed activity never saves again',
@@ -1279,7 +1350,7 @@ Future<void> _reveal(WidgetTester tester, Finder finder) async {
     await tester.scrollUntilVisible(
       finder,
       160,
-      scrollable: find.byType(Scrollable),
+      scrollable: find.byType(Scrollable).first,
     );
   }
   await tester.ensureVisible(finder);

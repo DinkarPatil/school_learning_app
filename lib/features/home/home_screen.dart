@@ -13,18 +13,10 @@ class HomeScreen extends StatelessWidget {
   const HomeScreen({
     super.key,
     required this.controller,
-    this.onContinue,
-    this.onOpenSubjects,
-    this.onOpenGames,
-    this.onTeacher,
     this.onParentLock,
   });
 
   final AppController controller;
-  final VoidCallback? onContinue;
-  final VoidCallback? onOpenSubjects;
-  final VoidCallback? onOpenGames;
-  final VoidCallback? onTeacher;
   final VoidCallback? onParentLock;
 
   @override
@@ -66,62 +58,65 @@ class HomeScreen extends StatelessWidget {
                     onGoHome: () {},
                     onBack: () {},
                   )
-                : ListView(
-                    padding: const EdgeInsets.fromLTRB(20, 12, 20, 28),
-                    children: [
-                      if (controller.hasUnreadableProgress) ...<Widget>[
-                        const LearningStuckNotice(),
-                        const SizedBox(height: 12),
-                      ],
-                      Text(
-                        'What would you like to do?',
-                        style:
-                            Theme.of(context).textTheme.headlineSmall?.copyWith(
-                                  fontWeight: FontWeight.w800,
-                                ),
-                      ),
-                      const SizedBox(height: 16),
-                      if (controller.catalog != null) ...<Widget>[
-                        ProgressSummary(
-                          key: const Key('home-progress-summary'),
-                          progress: controller.progress,
-                          totalActivities:
-                              controller.catalog?.activities.length ?? 0,
+                : ContentWidthLimiter(
+                    child: ListView(
+                      padding: const EdgeInsets.fromLTRB(20, 12, 20, 28),
+                      children: <Widget>[
+                        if (controller.hasUnreadableProgress) ...<Widget>[
+                          const LearningStuckNotice(),
+                          const SizedBox(height: 12),
+                        ],
+                        Text(
+                          'What would you like to do?',
+                          style: Theme.of(context)
+                              .textTheme
+                              .headlineSmall
+                              ?.copyWith(fontWeight: FontWeight.w800),
+                        ),
+                        const SizedBox(height: 16),
+                        if (controller.catalog != null) ...<Widget>[
+                          ProgressSummary(
+                            key: const Key('home-progress-summary'),
+                            progress: controller.progress,
+                            totalActivities:
+                                controller.catalog?.activities.length ?? 0,
+                          ),
+                          const SizedBox(height: 12),
+                        ],
+                        _LearningChoice(
+                          title: 'Continue learning',
+                          subtitle: _continueSubtitle(),
+                          icon: Icons.play_circle_outline,
+                          color: const Color(0xFFD8F3EF),
+                          onTap: () => _continue(context),
                         ),
                         const SizedBox(height: 12),
+                        _LearningChoice(
+                          title: 'Choose a subject',
+                          subtitle: 'Pick something you want to explore.',
+                          icon: Icons.menu_book_outlined,
+                          color: const Color(0xFFFFE7C2),
+                          onTap: () => _openSubjects(context),
+                        ),
+                        const SizedBox(height: 12),
+                        _LearningChoice(
+                          title: 'Play and learn',
+                          subtitle:
+                              'Letters, numbers, words, and gentle games.',
+                          icon: Icons.sports_esports_outlined,
+                          color: const Color(0xFFE5E0FF),
+                          onTap: () => _openGames(context),
+                        ),
+                        const SizedBox(height: 12),
+                        _LearningChoice(
+                          title: 'Ask your teacher',
+                          subtitle: 'Get a helpful hint when you need one.',
+                          icon: Icons.record_voice_over_outlined,
+                          color: const Color(0xFFFFDAD6),
+                          onTap: () => _showTeacherNotice(context),
+                        ),
                       ],
-                      _LearningChoice(
-                        title: 'Continue learning',
-                        subtitle: _continueSubtitle(),
-                        icon: Icons.play_circle_outline,
-                        color: const Color(0xFFD8F3EF),
-                        onTap: onContinue ?? () => _continue(context),
-                      ),
-                      const SizedBox(height: 12),
-                      _LearningChoice(
-                        title: 'Choose a subject',
-                        subtitle: 'Pick something you want to explore.',
-                        icon: Icons.menu_book_outlined,
-                        color: const Color(0xFFFFE7C2),
-                        onTap: () => _openSubjects(context),
-                      ),
-                      const SizedBox(height: 12),
-                      _LearningChoice(
-                        title: 'Play and learn',
-                        subtitle: 'Letters, numbers, words, and gentle games.',
-                        icon: Icons.sports_esports_outlined,
-                        color: const Color(0xFFE5E0FF),
-                        onTap: () => _openGames(context),
-                      ),
-                      const SizedBox(height: 12),
-                      _LearningChoice(
-                        title: 'Ask your teacher',
-                        subtitle: 'Get a helpful hint when you need one.',
-                        icon: Icons.record_voice_over_outlined,
-                        color: const Color(0xFFFFDAD6),
-                        onTap: onTeacher ?? () => _showTeacherNotice(context),
-                      ),
-                    ],
+                    ),
                   ),
           ),
         );
@@ -148,20 +143,10 @@ class HomeScreen extends StatelessWidget {
 
   void _openSubjects(BuildContext context) {
     controller.resetSelection();
-    final callback = onOpenSubjects;
-    if (callback != null) {
-      callback();
-      return;
-    }
     Navigator.pushNamed(context, RouteNames.subjects);
   }
 
   void _openGames(BuildContext context) {
-    final callback = onOpenGames;
-    if (callback != null) {
-      callback();
-      return;
-    }
     Navigator.pushNamed(context, RouteNames.subjects, arguments: true);
   }
 

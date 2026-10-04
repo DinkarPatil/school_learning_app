@@ -765,7 +765,10 @@ class _GameScreenState extends State<GameScreen> {
     List<GameLetter> letters,
   ) async {
     if (_round >= kGameRounds) {
-      await _settle(() => _persistGameScore());
+      await _settle(
+        () => _persistGameScore(),
+        onTimeout: _reportSaveTimeout,
+      );
       if (!mounted) {
         return;
       }
@@ -930,12 +933,26 @@ class _GameScreenState extends State<GameScreen> {
     }
   }
 
-  Future<void> _settle(Future<bool> Function() work) async {
+  Future<void> _settle(
+    Future<bool> Function() work, {
+    VoidCallback? onTimeout,
+  }) async {
     try {
       await work().timeout(kGameSaveTimeout);
+    } on TimeoutException {
+      onTimeout?.call();
     } on Object {
       return;
     }
+  }
+
+  void _reportSaveTimeout() {
+    if (_canUpdate) {
+      setState(() => _saveError = kSaveTimeoutMessage);
+    }
+    ScaffoldMessenger.maybeOf(context)?.showSnackBar(
+      const SnackBar(content: Text(kSaveTimeoutMessage)),
+    );
   }
 
   void _goBack(BuildContext context, AppController controller) {
@@ -958,7 +975,10 @@ class _GameScreenState extends State<GameScreen> {
     AppController controller, {
     required bool home,
   }) async {
-    await _settle(() => _persistGameScore(controller));
+    await _settle(
+      () => _persistGameScore(controller),
+      onTimeout: _reportSaveTimeout,
+    );
     if (!context.mounted) {
       return;
     }

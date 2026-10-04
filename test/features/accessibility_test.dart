@@ -357,8 +357,13 @@ void main() {
       expect(find.text('Drawing area'), findsNothing);
 
       expect(_buttonFor('Clear drawing'), findsOneWidget);
+      expect(_buttonFor('Undo last line'), findsOneWidget);
       final node = tester.getSemantics(find.bySemanticsLabel('Clear drawing'));
-      expect(node.getSemanticsData().hasAction(SemanticsAction.tap), isTrue);
+      expect(
+        node.getSemanticsData().hasAction(SemanticsAction.tap),
+        isFalse,
+        reason: 'there is nothing to clear until a line is drawn',
+      );
 
       semantics.dispose();
     });
@@ -542,6 +547,170 @@ void main() {
     });
   });
 
+  group('wide surfaces and large text', () {
+    testWidgets('the app bar grows with the text scale so titles are not cut',
+        (tester) async {
+      for (final scale in <double>[1.0, 2.0, 3.0, 4.0]) {
+        await tester.binding.setSurfaceSize(const Size(360, 900));
+        tester.platformDispatcher.textScaleFactorTestValue = scale;
+        addTearDown(() async {
+          tester.platformDispatcher.clearTextScaleFactorTestValue();
+          await tester.binding.setSurfaceSize(null);
+        });
+
+        await _pumpApp(tester, _testDependencies());
+        await _tap(tester, 'Choose a subject');
+
+        final appBarHeight = tester.getSize(find.byType(AppBar)).height;
+        final titles = find.descendant(
+          of: find.byType(AppBar),
+          matching: find.byType(Text),
+        );
+
+        expect(
+          appBarHeight,
+          greaterThanOrEqualTo(AppTheme.baseToolbarHeight * scale),
+          reason: 'scale $scale',
+        );
+        expect(titles, findsWidgets, reason: 'scale $scale');
+        for (var index = 0; index < titles.evaluate().length; index++) {
+          expect(
+            tester.getSize(titles.at(index)).height,
+            lessThanOrEqualTo(appBarHeight),
+            reason: 'the app bar title must not be clipped at scale $scale',
+          );
+        }
+
+        await tester.pumpWidget(const SizedBox.shrink());
+        await tester.pumpAndSettle();
+      }
+    });
+
+    testWidgets('content is capped and centred on a desktop surface',
+        (tester) async {
+      await tester.binding.setSurfaceSize(const Size(1440, 900));
+      addTearDown(() async {
+        await tester.binding.setSurfaceSize(null);
+      });
+
+      await _pumpApp(tester, _testDependencies());
+
+      final summary = find.byKey(const Key('home-progress-summary'));
+      final summaryRect = tester.getRect(summary);
+
+      expect(summaryRect.width, lessThanOrEqualTo(kMaxContentWidth));
+      expect(
+        summaryRect.center.dx,
+        closeTo(1440 / 2, 1),
+        reason: 'the reading column stays centred',
+      );
+      for (final label in <String>[
+        'Continue learning',
+        'Choose a subject',
+        'Play and learn',
+        'Ask your teacher',
+      ]) {
+        final card = find.ancestor(
+          of: find.text(label),
+          matching: find.byType(Card),
+        );
+        expect(
+          tester.getSize(card).width,
+          lessThanOrEqualTo(kMaxContentWidth),
+          reason: label,
+        );
+      }
+    });
+
+    testWidgets('a phone width surface is not narrowed', (tester) async {
+      await tester.binding.setSurfaceSize(const Size(390, 844));
+      addTearDown(() async {
+        await tester.binding.setSurfaceSize(null);
+      });
+
+      await _pumpApp(tester, _testDependencies());
+
+      expect(
+        tester.getSize(find.byKey(const Key('home-progress-summary'))).width,
+        390 - 40,
+      );
+    });
+
+    testWidgets('the action bar never takes over the screen', (tester) async {
+      await tester.binding.setSurfaceSize(const Size(320, 640));
+      tester.platformDispatcher.textScaleFactorTestValue = 2.0;
+      addTearDown(() async {
+        tester.platformDispatcher.clearTextScaleFactorTestValue();
+        await tester.binding.setSurfaceSize(null);
+      });
+
+      await _pumpApp(tester, _testDependencies());
+      await _tap(tester, 'Choose a subject');
+      await _tap(tester, 'Class 1');
+      await _tap(tester, 'English');
+      await _tap(tester, 'Class 1 Story');
+      await _advanceToReward(tester);
+
+      final barHeight = tester.getSize(find.byType(LearningActionBar)).height;
+
+      expect(barHeight, lessThanOrEqualTo(640 * 0.4));
+      expect(
+        tester.getSize(find.byType(Scrollable).first).height,
+        greaterThan(0),
+      );
+      for (final label in <String>['Finish', 'Go home', 'Previous step']) {
+        expect(find.text(label), findsOneWidget, reason: label);
+      }
+      final undoPoint =
+          tester.getRect(find.byType(LearningActionBar)).bottomRight;
+      expect(undoPoint.dy, lessThanOrEqualTo(640));
+    });
+
+    testWidgets('the drawing pad reports how much has been drawn',
+        (tester) async {
+      final semantics = tester.ensureSemantics();
+      await _pumpApp(tester, _testDependencies());
+      await _openStoryActivity(tester);
+      await _advanceToPractice(tester);
+
+      SemanticsNode pad() => tester.getSemantics(
+            find.bySemanticsLabel('Drawing area'),
+          );
+
+      expect(pad().value, 'Nothing drawn yet');
+      expect(
+        tester
+            .getSemantics(find.bySemanticsLabel('Clear drawing'))
+            .getSemanticsData()
+            .hasAction(SemanticsAction.tap),
+        isFalse,
+        reason: 'nothing to clear yet',
+      );
+
+      await _reveal(tester, find.bySemanticsLabel('Drawing area'));
+      expectOnScreen(
+        tester,
+        find.bySemanticsLabel('Drawing area'),
+        reason: 'drawing area',
+      );
+
+      await _drawOneLine(tester);
+
+      expect(pad().value, '1 line drawn');
+
+      await _tap(tester, 'Undo last line');
+      expect(pad().value, 'Nothing drawn yet');
+
+      await _drawOneLine(tester);
+      expect(pad().value, '1 line drawn');
+
+      await _tap(tester, 'Clear drawing');
+      expect(pad().value, 'Nothing drawn yet');
+
+      semantics.dispose();
+    });
+  });
+
   group('contrast', () {
     test('accent surfaces keep light text readable', () {
       expect(
@@ -676,6 +845,21 @@ Future<void> _advanceToPractice(WidgetTester tester) async {
   await _tap(tester, 'Next question');
   await _tap(tester, 'Write');
   await _tap(tester, 'Next step');
+}
+
+Future<void> _drawOneLine(WidgetTester tester) async {
+  await tester.ensureVisible(find.byType(DrawingPad));
+  await tester.pumpAndSettle();
+  final area = tester.getRect(find.byType(DrawingPad));
+  final gesture =
+      await tester.startGesture(area.topLeft + const Offset(80, 80));
+  await tester.pump(const Duration(milliseconds: 60));
+  await gesture.moveBy(const Offset(0, -40));
+  await tester.pump(const Duration(milliseconds: 30));
+  await gesture.moveBy(const Offset(0, -40));
+  await tester.pump(const Duration(milliseconds: 30));
+  await gesture.up();
+  await tester.pumpAndSettle();
 }
 
 Future<void> _advanceToReward(WidgetTester tester) async {
